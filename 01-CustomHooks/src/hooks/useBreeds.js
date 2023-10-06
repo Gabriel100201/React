@@ -1,11 +1,14 @@
-function useBreeds() {
-    const [breeds, setBreeds] = useState([]);
+import { useEffect, useState } from "react";
+import { getBreeds } from "../services/breeds";
+
+export function useBreeds() {
+    const [breeds, setBreeds] = useState(null);
     useEffect(() => {
-        fetch("https://dog.ceo/api/breeds/list/all")
-            .then((res) => res.json())
-            .then((data) => {
-                const breedNames = Object.keys(data.message);
-                setBreeds(breedNames);
-            });
-    }, []);
+        getBreeds()
+            .then((res) => {
+                setBreeds(res)
+            })
+            .catch((err) => console.log(err))
+    }, [])
+    return breeds;
 }
