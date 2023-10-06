@@ -1,0 +1,46 @@
+import { useEffect, useState } from "react";
+
+export const BreedsList = () => {
+  const [breedSelected, setbreedSelected] = useState("");
+
+  const hanldeBreedSelected = (ev) => {
+    setbreedSelected(ev.target.value);
+  };
+
+  return (
+    <>
+      <section className="flex w-full items-center justify-center gap-12 bg-slate-800 px-32 py-20">
+        <div>
+          <select
+            onChange={hanldeBreedSelected}
+            className="rounded-lg bg-slate-200 px-5 py-3 text-center"
+            name="breedSelect"
+            id="breedId"
+          >
+            <option value={null}>Razas</option>
+            {breeds &&
+              breeds.map((breed, index) => {
+                return (
+                  <option
+                    value={breed}
+                    className="w-full text-center"
+                    key={index}
+                  >
+                    {breed}
+                  </option>
+                );
+              })}
+          </select>
+        </div>
+
+        <div className="flex h-20 w-1/5 items-center justify-center rounded-lg bg-slate-200">
+          {breedSelected && (
+            <span className="text-xl font-bold text-slate-800">
+              {breedSelected.toUpperCase()}
+            </span>
+          )}
+        </div>
+      </section>
+    </>
+  );
+};

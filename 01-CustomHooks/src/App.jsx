@@ -1,10 +1,9 @@
-import { Header } from "./components/pure/Header";
-import { Main } from "./components/pure/Main";
+import { BreedsList } from "./components/BreedsList";
+
 function App() {
   return (
     <>
-      <Header></Header>
-      <Main></Main>
+      <BreedsList></BreedsList>
     </>
   );
 }
