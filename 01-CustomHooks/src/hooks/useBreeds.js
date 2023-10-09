@@ -8,7 +8,7 @@ export function useBreeds() {
             .then((res) => {
                 setBreeds(res)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => setBreeds(err))
     }, [])
     return breeds;
 }

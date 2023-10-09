@@ -4,6 +4,7 @@ export const BreedSelection = ({
   hanldeBreedSelected,
   defaultWord,
 }) => {
+  const BreedSelectedColor = breedSelected ? "bg-slate-200" : "bg-slate-600";
   return (
     <section className="flex w-full items-center justify-center gap-12 bg-slate-800 px-32 py-20">
       <div>
@@ -29,10 +30,16 @@ export const BreedSelection = ({
         </select>
       </div>
 
-      <div className="flex h-20 w-1/5 items-center justify-center rounded-lg bg-slate-200">
-        {breedSelected && (
+      <div
+        className={`flex h-20 w-1/5 items-center justify-center rounded-lg ${BreedSelectedColor}`}
+      >
+        {breedSelected ? (
           <span className="text-xl font-bold text-slate-800">
             {breedSelected.toUpperCase()}
+          </span>
+        ) : (
+          <span className="text-xl font-bold text-slate-800">
+            Seleccione una raza
           </span>
         )}
       </div>
