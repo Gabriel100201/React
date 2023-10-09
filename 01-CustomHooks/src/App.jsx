@@ -3,7 +3,9 @@ import { BreedsList } from "./components/BreedsList";
 function App() {
   return (
     <>
-      <BreedsList></BreedsList>
+      <section className="flex w-full flex-wrap">
+        <BreedsList></BreedsList>
+      </section>
     </>
   );
 }

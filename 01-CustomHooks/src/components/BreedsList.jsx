@@ -16,16 +16,18 @@ export const BreedsList = () => {
 
   return (
     <>
-      <BreedSelection
-        defaultWord={defaultWord}
-        breedSelected={breedSelected}
-        breeds={breeds}
-        hanldeBreedSelected={hanldeBreedSelected}
-      ></BreedSelection>
-      <DogImageContainer
-        dogImageUrl={dogImageUrl}
-        breedSelected={breedSelected}
-      ></DogImageContainer>
+      <div className="w-full">
+        <BreedSelection
+          defaultWord={defaultWord}
+          breedSelected={breedSelected}
+          breeds={breeds}
+          hanldeBreedSelected={hanldeBreedSelected}
+        ></BreedSelection>
+        <DogImageContainer
+          dogImageUrl={dogImageUrl}
+          breedSelected={breedSelected}
+        ></DogImageContainer>
+      </div>
     </>
   );
 };
