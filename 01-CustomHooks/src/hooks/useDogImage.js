@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 import { imgByBreed } from "../services/imgByBreed";
 
-export function useDogImage({ breedSelected }) {
-    const [dogImageUrl, setDogImageUrl] = useState("");
+export function useDogImage({ breedSelected, buttonSelected }) {
+    const [dogImageUrl, setDogImageUrl] = useState(null);
+
+    const loadImg = () => {
+        if (breedSelected == null) return;
+        imgByBreed(breedSelected, buttonSelected)
+            .then((res) => {
+                console.log(res)
+                setDogImageUrl(res)
+            })
+            .catch((err) => console.log(err))
+    }
 
     useEffect(() => {
-        if (breedSelected == null) return;
-        imgByBreed(breedSelected)
-            .then((res) => setDogImageUrl(res))
-            .catch((err) => console.log(err))
+        loadImg()
     }, [breedSelected]);
-    return dogImageUrl
+
+    return { dogImageUrl, reloadImg: loadImg }
 }

@@ -8,8 +8,11 @@ export const BreedsList = () => {
   const defaultWord = "Razas";
   const breeds = useBreeds();
   const [breedSelected, setbreedSelected] = useState(null);
-  const dogImageUrl = useDogImage({ breedSelected });
-
+  const [buttonSelected, setButtonSelected] = useState(1);
+  const { dogImageUrl, reloadImg } = useDogImage({
+    breedSelected,
+    buttonSelected,
+  });
   const hanldeBreedSelected = (ev) => {
     if (ev.target.value != defaultWord) setbreedSelected(ev.target.value);
   };
@@ -18,10 +21,13 @@ export const BreedsList = () => {
     <>
       <div className="w-full">
         <BreedSelection
+          setButtonSelected={setButtonSelected}
+          buttonSelected={buttonSelected}
           defaultWord={defaultWord}
           breedSelected={breedSelected}
           breeds={breeds}
           hanldeBreedSelected={hanldeBreedSelected}
+          reloadImg={reloadImg}
         ></BreedSelection>
         <DogImageContainer
           dogImageUrl={dogImageUrl}
