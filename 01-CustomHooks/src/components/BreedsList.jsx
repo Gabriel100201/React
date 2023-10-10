@@ -13,9 +13,11 @@ export const BreedsList = () => {
     breedSelected,
     buttonSelected,
   });
+
   const hanldeBreedSelected = (ev) => {
     if (ev.target.value != defaultWord) setbreedSelected(ev.target.value);
   };
+
   useEffect(() => reloadImg(), [buttonSelected]);
 
   return (
