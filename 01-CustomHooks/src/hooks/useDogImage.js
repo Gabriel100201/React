@@ -8,7 +8,6 @@ export function useDogImage({ breedSelected, buttonSelected }) {
         if (breedSelected == null) return;
         imgByBreed(breedSelected, buttonSelected)
             .then((res) => {
-                console.log(res)
                 setDogImageUrl(res)
             })
             .catch((err) => console.log(err))

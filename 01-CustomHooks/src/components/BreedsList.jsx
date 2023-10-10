@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useBreeds } from "../hooks/useBreeds";
 import { useDogImage } from "../hooks/useDogImage";
 import { DogImageContainer } from "./DogImageContainer";
@@ -16,6 +16,7 @@ export const BreedsList = () => {
   const hanldeBreedSelected = (ev) => {
     if (ev.target.value != defaultWord) setbreedSelected(ev.target.value);
   };
+  useEffect(() => reloadImg(), [buttonSelected]);
 
   return (
     <>

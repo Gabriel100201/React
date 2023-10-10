@@ -1,4 +1,3 @@
-import { useState } from "react";
 import refresh from "../assets/refresh.png";
 export const BreedSelection = ({
   setButtonSelected,
