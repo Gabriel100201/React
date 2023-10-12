@@ -1,10 +1,11 @@
-import { Header } from "./components/pure/Header";
-import { Main } from "./components/pure/Main";
+import { InputContainer } from "./components/InputContainer";
+
 function App() {
   return (
     <>
-      <Header></Header>
-      <Main></Main>
+      <div className="h-56 w-full">
+        <InputContainer></InputContainer>
+      </div>
     </>
   );
 }
