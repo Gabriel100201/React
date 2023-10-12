@@ -17,7 +17,12 @@ export const BreedSelection = ({
 
   return (
     <>
-      <section className="flex w-full items-center justify-center gap-12 bg-slate-800 px-32 py-20">
+      <section className="flex w-full flex-wrap items-center justify-center gap-12 bg-slate-800 px-32 py-20">
+        <div className="flex w-full justify-center">
+          <form className="flex w-80 justify-center">
+            <input type="text" className="h-10 w-full rounded-lg px-5" />
+          </form>
+        </div>
         <div>
           <select
             onChange={hanldeBreedSelected}
