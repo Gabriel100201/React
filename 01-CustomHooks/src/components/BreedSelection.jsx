@@ -1,3 +1,4 @@
+import { useState } from "react";
 import refresh from "../assets/refresh.png";
 export const BreedSelection = ({
   setButtonSelected,
@@ -8,16 +9,21 @@ export const BreedSelection = ({
   defaultWord,
   reloadImg,
 }) => {
+  const [word, setWord] = useState("");
   const BreedSelectedColor = breedSelected ? "bg-slate-200" : "bg-slate-600";
 
   const handleButton = (ev) => {
     const selectedValue = parseInt(ev.target.value);
     setButtonSelected(selectedValue);
   };
+  const hanldeWord = (ev) => {
+    const value = ev.target.value;
+    setWord(value);
+  };
 
   return (
     <>
-      <section className="flex w-full items-center justify-center gap-12 bg-slate-800 px-32 py-20">
+      <section className="flex w-full flex-wrap items-center justify-center gap-12 bg-slate-800 px-32 py-20">
         <div>
           <select
             onChange={hanldeBreedSelected}
