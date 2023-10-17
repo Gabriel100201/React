@@ -1,28 +1,35 @@
-import { useState } from "react";
-import { ImgContainer } from "./ImgContainer";
+import { useCallback } from "react";
+import "../styles/movies.css";
+import debounce from "just-debounce-it";
+import { Input } from "@nextui-org/react";
 
-export const InputContainer = () => {
-  const [word, setWord] = useState("");
+export const InputContainer = ({ title, setTitle, getMovies, error }) => {
+  const debouncedGetMovies = useCallback(
+    debounce((title) => {
+      getMovies({ title });
+    }, 400),
+    [setTitle],
+  );
 
-  /*   const handleWord = (ev) => {
-    const newWord = ev.target.value;
-    if (newWord == " ") return;
-    setWord(newWord);
-  }; */
-  const handleSubmit = () => {
-    setWord(word);
+  const handleChange = (event) => {
+    const newSearch = event.target.value;
+    setTitle(newSearch);
+    debouncedGetMovies(newSearch);
   };
 
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
-        className="flex h-32 w-full items-center justify-center bg-slate-900"
-      >
-        <input className="h-7 w-1/3 rounded-lg px-7 py-5" type="text" />
-        <button>LOAD</button>
-      </form>
-      <ImgContainer word={word}></ImgContainer>
-    </>
+    <form className="flex w-full items-center justify-center">
+      <Input
+        color="secondary"
+        className="w-72"
+        size="lg"
+        type="text"
+        label="Movie"
+        isInvalid={error}
+        errorMessage={error}
+        value={title}
+        onChange={handleChange}
+      />
+    </form>
   );
 };
