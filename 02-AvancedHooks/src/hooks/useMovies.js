@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { API_URL } from "../constants/API";
+import { animateCards } from "../animations/card";
 
 export const useMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -9,7 +10,6 @@ export const useMovies = () => {
 
   const getMovies = ({ title }) => {
     if (previousTitle.current == title) return
-    setMovies([])
     setError(null)
     if (title === '') {
       setError('No se puede buscar una película vacía')
@@ -31,7 +31,10 @@ export const useMovies = () => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        if (!res.Search) setError("No se encontro ninguna pelicula")
+        if (!res.Search) {
+          setError("No se encontro ninguna pelicula")
+          return
+        }
         setMovies(res.Search);
       })
       .catch(() => {

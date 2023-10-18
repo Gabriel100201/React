@@ -8,7 +8,7 @@ function App() {
   const { movies, getMovies, loading, error } = useMovies();
   return (
     <>
-      <div className="h-[1400px] w-full bg-primary-900 pt-20">
+      <div className="h-[1400px] w-full bg-primary-950 pt-20">
         <InputContainer
           title={title}
           setTitle={setTitle}

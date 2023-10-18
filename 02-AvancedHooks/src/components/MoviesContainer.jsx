@@ -6,20 +6,28 @@ import {
   CircularProgress,
 } from "@nextui-org/react";
 import { useEffect } from "react";
+import { animateCards } from "../animations/card";
 
 export const MoviesContainer = ({ movies, loading }) => {
+  useEffect(() => {
+    animateCards();
+  }, [movies]);
+
   return (
     <section className="bg-primar w-full">
-      <div className="movies-container">
-        {loading && (
+      {loading && (
+        <div className="mt-12 flex w-full justify-center">
           <CircularProgress color="default" aria-label="Loading..." />
-        )}
+        </div>
+      )}
+      <div className="movies-container">
         {movies &&
           movies.map((movie) => {
             if (movie.Poster == "N/A") return;
             return (
               <Card
-                className="w-200px max-h-[430px] min-h-[430px] min-w-[300px]"
+                shadow="lg"
+                className="w-200px card-animated max-h-[430px] min-h-[430px] min-w-[300px] shadow-2xl"
                 key={movie.imdbID}
                 isFooterBlurred
                 radius="lg"
@@ -31,7 +39,10 @@ export const MoviesContainer = ({ movies, loading }) => {
                   className="object-cover"
                   src={movie.Poster}
                 />
-                <CardFooter className="bg-black absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
+                <CardFooter
+                  color="secondary"
+                  className="absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-large border-1 border-white/20 bg-black py-1 shadow-small before:rounded-xl before:bg-white/10"
+                >
                   <p className="text-tiny text-white/80">{movie.Title}</p>
                   <Button
                     className="bg-black/20 text-tiny text-white"
