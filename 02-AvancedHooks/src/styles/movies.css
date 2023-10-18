@@ -7,6 +7,11 @@
     align-items: center;
     padding: 100px;
 }
+.movies-container > div{
+    box-shadow: 10px 10px 25px -7px rgba(0,0,0,0.83);
+-webkit-box-shadow: 10px 10px 25px -7px rgba(0,0,0,0.83);
+-moz-box-shadow: 10px 10px 25px -7px rgba(0,0,0,0.83);
+}
 @media (max-width: 500px) {
     .movies-container{
         padding: 30px;

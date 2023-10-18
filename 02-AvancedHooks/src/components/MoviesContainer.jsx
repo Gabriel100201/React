@@ -1,4 +1,10 @@
-import { Card, Button, CardFooter, Image } from "@nextui-org/react";
+import {
+  Card,
+  Button,
+  CardFooter,
+  Image,
+  ScrollShadow,
+} from "@nextui-org/react";
 import { useEffect } from "react";
 import { animateCards } from "../animations/card";
 
@@ -16,7 +22,7 @@ export const MoviesContainer = ({ movies }) => {
             return (
               <Card
                 shadow="lg"
-                className="w-200px card-animated max-h-[430px] min-h-[430px] min-w-[300px] opacity-0 shadow-2xl"
+                className="w-200px card-animated max-h-[430px] min-h-[430px] min-w-[300px] opacity-0"
                 key={movie.imdbID}
                 isFooterBlurred
                 radius="lg"
