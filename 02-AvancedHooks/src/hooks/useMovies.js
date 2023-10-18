@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { API_URL } from "../constants/API";
-import { animateCards } from "../animations/card";
+import { goOutCard } from "../animations/card";
 
 export const useMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -35,7 +35,10 @@ export const useMovies = () => {
           setError("No se encontro ninguna pelicula")
           return
         }
-        setMovies(res.Search);
+        setTimeout(() => {
+          setMovies(res.Search);
+        }, 400);
+        goOutCard()
       })
       .catch(() => {
         setError("Error al encontrar la pagina de busqueda")

@@ -14,12 +14,9 @@ function App() {
           setTitle={setTitle}
           getMovies={getMovies}
           error={error}
-        ></InputContainer>
-        <MoviesContainer
-          movies={movies}
           loading={loading}
-          error={error}
-        ></MoviesContainer>
+        ></InputContainer>
+        <MoviesContainer movies={movies} error={error}></MoviesContainer>
       </div>
     </>
   );

@@ -1,25 +1,14 @@
-import {
-  Card,
-  Button,
-  CardFooter,
-  Image,
-  CircularProgress,
-} from "@nextui-org/react";
+import { Card, Button, CardFooter, Image } from "@nextui-org/react";
 import { useEffect } from "react";
 import { animateCards } from "../animations/card";
 
-export const MoviesContainer = ({ movies, loading }) => {
+export const MoviesContainer = ({ movies }) => {
   useEffect(() => {
     animateCards();
   }, [movies]);
 
   return (
     <section className="bg-primar w-full">
-      {loading && (
-        <div className="mt-12 flex w-full justify-center">
-          <CircularProgress color="default" aria-label="Loading..." />
-        </div>
-      )}
       <div className="movies-container">
         {movies &&
           movies.map((movie) => {
@@ -27,7 +16,7 @@ export const MoviesContainer = ({ movies, loading }) => {
             return (
               <Card
                 shadow="lg"
-                className="w-200px card-animated max-h-[430px] min-h-[430px] min-w-[300px] shadow-2xl"
+                className="w-200px card-animated max-h-[430px] min-h-[430px] min-w-[300px] opacity-0 shadow-2xl"
                 key={movie.imdbID}
                 isFooterBlurred
                 radius="lg"
