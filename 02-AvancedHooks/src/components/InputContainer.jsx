@@ -18,18 +18,17 @@ export const InputContainer = ({ title, setTitle, getMovies, error }) => {
   };
 
   return (
-    <form className="flex w-full items-center justify-center">
+    <form className="flex w-full flex-col items-center justify-center gap-3">
       <Input
         color="secondary"
         className="w-72"
         size="lg"
         type="text"
         label="Movie"
-        isInvalid={error}
-        errorMessage={error}
         value={title}
         onChange={handleChange}
       />
+      {error && <span className="text-red-500">{error}</span>}
     </form>
   );
 };
