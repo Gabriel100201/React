@@ -1,7 +1,12 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "../styles/movies.css";
 import debounce from "just-debounce-it";
-import { Input, CircularProgress } from "@nextui-org/react";
+import {
+  Input,
+  CircularProgress,
+  CheckboxGroup,
+  Checkbox,
+} from "@nextui-org/react";
 
 export const InputContainer = ({
   title,
@@ -10,9 +15,11 @@ export const InputContainer = ({
   error,
   loading,
 }) => {
+  const [selectValue, setSelect] = useState("all");
+  console.log("RE RENDER");
   const debouncedGetMovies = useCallback(
     debounce((title) => {
-      getMovies({ title });
+      getMovies({ title, checks: selectValue });
     }, 400),
     [setTitle],
   );
@@ -21,6 +28,15 @@ export const InputContainer = ({
     const newSearch = event.target.value;
     setTitle(newSearch);
     debouncedGetMovies(newSearch);
+  };
+
+  const handleCheck = (checks) => {
+    let newChecks = checks;
+    if (newChecks instanceof Array) {
+      newChecks = newChecks[1];
+    }
+    setSelect(newChecks);
+    getMovies({ title, checks: newChecks });
   };
 
   return (
@@ -41,6 +57,24 @@ export const InputContainer = ({
           )}
         </div>
       </div>
+      <CheckboxGroup
+        onChange={handleCheck}
+        color="default"
+        className="mt-5"
+        orientation="horizontal"
+        defaultValue={[selectValue]}
+        value={[selectValue]}
+      >
+        <Checkbox value="all">
+          <span className="text-secondary-50">All</span>
+        </Checkbox>
+        <Checkbox value="movie">
+          <span className="text-secondary-50">Movie</span>
+        </Checkbox>
+        <Checkbox value="series">
+          <span className="text-secondary-50">Serie</span>
+        </Checkbox>
+      </CheckboxGroup>
       {error && <span className="text-red-500">{error}</span>}
     </form>
   );

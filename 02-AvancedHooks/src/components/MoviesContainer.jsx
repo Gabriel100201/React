@@ -3,7 +3,6 @@ import {
   Button,
   CardFooter,
   Image,
-  ScrollShadow,
 } from "@nextui-org/react";
 import { useEffect } from "react";
 import { animateCards } from "../animations/card";

@@ -7,9 +7,12 @@ export const useMovies = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const previousTitle = useRef("");
+  const previousChecks = useRef([])
 
-  const getMovies = ({ title }) => {
-    if (previousTitle.current == title) return
+  const getMovies = ({ title, checks }) => {
+    console.log("Select check", checks)
+    if (previousTitle.current == title && previousChecks.current == checks) return
+
     setError(null)
     if (title === '') {
       setError('No se puede buscar una película vacía')
@@ -27,7 +30,8 @@ export const useMovies = () => {
     }
     setLoading(true)
     previousTitle.current = title;
-    const url = API_URL(title);
+    previousChecks.current = checks;
+    const url = API_URL(title, checks);
     fetch(url)
       .then((res) => res.json())
       .then((res) => {

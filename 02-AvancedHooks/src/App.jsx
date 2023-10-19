@@ -6,6 +6,7 @@ import { useMovies } from "./hooks/useMovies";
 function App() {
   const [title, setTitle] = useState("");
   const { movies, getMovies, loading, error } = useMovies();
+
   return (
     <>
       <div className="min-h-[100vh] w-full bg-gradient-to-b from-primary-950 to-primary-700 pt-20">
