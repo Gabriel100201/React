@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "../styles/movies.css";
 import debounce from "just-debounce-it";
 import {
@@ -15,11 +15,13 @@ export const InputContainer = ({
   error,
   loading,
 }) => {
+  const prevSearch = useRef("all");
+
   const [selectValue, setSelect] = useState("all");
-  console.log("RE RENDER");
+
   const debouncedGetMovies = useCallback(
     debounce((title) => {
-      getMovies({ title, checks: selectValue });
+      getMovies({ title, checks: prevSearch.current });
     }, 400),
     [setTitle],
   );
@@ -31,12 +33,15 @@ export const InputContainer = ({
   };
 
   const handleCheck = (checks) => {
+    if (checks == undefined || checks[1] == undefined) return;
     let newChecks = checks;
     if (newChecks instanceof Array) {
       newChecks = newChecks[1];
     }
     setSelect(newChecks);
-    getMovies({ title, checks: newChecks });
+    prevSearch.current = newChecks;
+    console.log("Ultima busqueda: ", prevSearch);
+    getMovies({ title, checks: prevSearch.current });
   };
 
   return (
