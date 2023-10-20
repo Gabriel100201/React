@@ -1,33 +1,39 @@
-import { useMemo, useState } from "react";
+import { useContext, useState } from "react";
+import { ColorContext } from "./context/color";
+import { Header } from "./components/Header";
 
 function App() {
-  const [cont, setCont] = useState(0);
-  const [page, setPage] = useState(0);
+  const { color, setColor } = useContext(ColorContext);
 
-  const handleClick = () => {
-    const newCont = cont + 1;
-    setCont(newCont);
-    console.log(newCont);
-    if (newCont == 5 || newCont == 10) {
-      setPage(page + 1);
-    }
+  const handleClickPrimary = () => {
+    setColor({ primary: "bg-green-500" });
   };
 
-  const calculatedTime = useMemo(() => {
-    const newTime = new Date();
-    return newTime;
-  }, [page]);
+  const handleClickSecondary = () => {
+    setColor({ secondary: "bg-blue-700" });
+  };
 
   return (
     <>
-      <div className="h-56 w-full">
-        <button onClick={handleClick}>Now</button>
-        <div className="flex flex-col">
-          <span>{cont}</span>
-          <span>Time: {calculatedTime.toString()}</span>
+      <div className="flex justify-center p-32">
+        <div
+          className={`${color.primary} flex h-[500px] w-[90%] flex-col items-center gap-5 p-5`}
+        >
+          <span className="w-full text-center">App</span>
+          <Header></Header>
+          <button
+            onClick={handleClickPrimary}
+            className="min-w-32 rounded-lg bg-sky-100 p-3"
+          >
+            Change Primary
+          </button>
+          <button
+            onClick={handleClickSecondary}
+            className="min-w-32 rounded-lg bg-sky-100 p-3"
+          >
+            Change Secondary
+          </button>
         </div>
-        <label htmlFor="username">Click me</label>
-        <input type="text" id="username"></input>
       </div>
     </>
   );
