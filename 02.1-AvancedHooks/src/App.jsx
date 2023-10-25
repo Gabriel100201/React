@@ -3,21 +3,21 @@ import { ColorContext } from "./context/color";
 import { Header } from "./components/Header";
 
 function App() {
-  const { color, setColor } = useContext(ColorContext);
+  const { color, changeColorBlue } = useContext(ColorContext);
 
   const handleClickPrimary = () => {
-    setColor({ primary: "bg-green-500" });
+    changeColorBlue();
   };
 
   const handleClickSecondary = () => {
-    setColor({ secondary: "bg-blue-700" });
+    changeColorBlue();
   };
 
   return (
     <>
       <div className="flex justify-center p-32">
         <div
-          className={`${color.primary} flex h-[500px] w-[90%] flex-col items-center gap-5 p-5`}
+          className={`${color} flex h-[500px] w-[90%] flex-col items-center gap-5 p-5`}
         >
           <span className="w-full text-center">App</span>
           <Header></Header>
