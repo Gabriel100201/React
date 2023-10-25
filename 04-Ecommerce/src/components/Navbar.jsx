@@ -1,7 +1,17 @@
 export const Navbar = () => {
   return (
-    <header className="h-20 w-full bg-slate-500">
-      <nav>Nav</nav>
+    <header className="bg-pmy flex h-20 w-full justify-between">
+      <div className="h-full">
+        <img src="" alt="" />
+      </div>
+      <nav className="w-56">
+        <button></button>
+        <button></button>
+        <button></button>
+        <div>
+          <button></button>
+        </div>
+      </nav>
     </header>
   );
 };
