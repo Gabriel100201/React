@@ -1,10 +1,13 @@
+import { Header } from "./components/Header";
+
 export const App = () => {
   return (
     <>
-      <div className="flex justify-center p-32">
+      <div className="w-full bg-orange-400">
+        <Header></Header>
       </div>
     </>
   );
-}
+};
 
 export default App;
