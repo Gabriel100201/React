@@ -13,7 +13,7 @@ export const Header = () => {
       <div>
         <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
           <input
-            className="text-primary h-full w-[400px] rounded-bl-xl rounded-tl-xl px-5"
+            className="text-primary h-full w-[400px] rounded-bl-xl rounded-tl-xl px-5 outline-none"
             type="text"
           />
           <button
