@@ -1,14 +1,15 @@
+import { Banner } from "./components/Banner";
 import { Header } from "./components/Header";
 import { NextUIProvider } from "@nextui-org/react";
-
 export const App = () => {
   return (
     <>
-      <div className="w-full bg-orange-400">
-        <NextUIProvider>
+      <NextUIProvider>
+        <div className="myTheme w-full bg-gray-900">
           <Header></Header>
-        </NextUIProvider>
-      </div>
+          <Banner></Banner>
+        </div>
+      </NextUIProvider>
     </>
   );
 };
