@@ -5,3 +5,6 @@
 * {
     transition: background-color .2s;
 }
+body{
+    background-color: #111;
+}
