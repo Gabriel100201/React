@@ -13,7 +13,7 @@ export const Header = () => {
       </div>
       <div>
         <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
-          <input placeholder="Qué desea"
+          <input placeholder="¿Qué desea buscar?"
             className="h-full w-[400px] rounded-bl-xl rounded-tl-xl bg-primary-200 px-5 text-primary-800 outline-none"
             type="text"
           />

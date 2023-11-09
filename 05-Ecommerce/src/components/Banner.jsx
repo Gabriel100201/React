@@ -9,7 +9,7 @@ export const Banner = () => {
         src={banner}
         alt="Imagen de cesped"
       />
-      <div className="absolute bottom-10 left-80 flex flex-col gap-3">
+      <div className="absolute bottom-10 left-80 flex flex-col gap-5">
         <h2 className="text-6xl font-semibold text-primary-50">
           Diciembre Promocional
         </h2>
