@@ -7,13 +7,13 @@ import logo from "../assets/Logo.svg";
 
 export const Header = () => {
   return (
-    <header className="flex h-20 w-full items-center justify-between bg-primary-50 bg-gradient-to-r px-80">
+    <header className="d-padding flex h-20 w-full items-center justify-between bg-primary-50 bg-gradient-to-r">
       <div className="w-36">
         <img src={logo} alt="Logo de la empresa" className="h-14" />
       </div>
       <div>
         <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
-          <input
+          <input placeholder="Qué desea"
             className="h-full w-[400px] rounded-bl-xl rounded-tl-xl bg-primary-200 px-5 text-primary-800 outline-none"
             type="text"
           />

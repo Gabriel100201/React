@@ -9,9 +9,17 @@ export const Banner = () => {
         src={banner}
         alt="Imagen de cesped"
       />
-      <Button className="absolute bottom-10 left-10 w-36 bg-primary-600 text-primary-50">
-        Ofertas
-      </Button>
+      <div className="absolute bottom-10 left-80 flex flex-col gap-3">
+        <h2 className="text-6xl font-semibold text-primary-50">
+          Diciembre Promocional
+        </h2>
+        <h3 className="text-2xl font-semibold text-primary-50">
+          Hasta 30% de descuento en balones historicos
+        </h3>
+        <Button className="w-36 bg-primary-600 text-primary-50">
+          Ver Ofertas
+        </Button>
+      </div>
     </div>
   );
 };
