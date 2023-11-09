@@ -1,0 +1,20 @@
+[
+    {
+        "Url": "https://github.com/Gabriel100201/E-commerce/blob/master/assets/pexels-fabricio-trujillo-54567.jpg?raw=true",
+        "Title": "Diciembre Promocional",
+        "Description": "Hace 30% de descuento de balones históricos",
+        "ButtonText": "Ver ofertas"
+    },
+    {
+        "Url": "https://www.autocontrolplan.es/wp-content/uploads/2020/11/pexels-juan-salamanca-61143-870x530.jpg",
+        "Title": "Descuentos Locales",
+        "Description": "Hasta 25% de descuento en balones de la liga Argentina",
+        "ButtonText": "Ver descuentos"
+    },
+    {
+        "Url": "https://fistf.com/wp-content/uploads/2017/08/cropped-UEFA-Champions-League-Stadium-Wallpaper-1.jpg",
+        "Title": "Comprando hoy",
+        "Description": "Participás por entradas para partidos de Champions",
+        "ButtonText": "Participá"
+    }
+]

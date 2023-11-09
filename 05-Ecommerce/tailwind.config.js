@@ -6,6 +6,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite-react/**/*.js"
   ],
   theme: {
     extend: {
@@ -27,45 +28,49 @@ export default {
       },
     },
   },
-  plugins: [nextui({
-    addCommonColors: true,
-    themes: {
-      "myTheme": {
-        extend: "dark",
-        colors: {
-          background: "#092B79",
-          foreground: "#ffffff",
-          primary: {
-            50: "#F8F4FF",
-            100: "#D6F2FE",
-            200: "#ADE2FE",
-            300: "#84CDFE",
-            400: "#65B9FD",
-            500: "#3398FD",
-            600: "#2576D9",
-            700: "#1958B6",
-            800: "#103D92",
-            900: "#092B79",
-            DEFAULT: "#2576D9",
-            foreground: "#ffffff",
+  plugins:
+    [
+      nextui({
+        addCommonColors: true,
+        themes: {
+          "myTheme": {
+            extend: "dark",
+            colors: {
+              background: "#092B79",
+              foreground: "#ffffff",
+              primary: {
+                50: "#F8F4FF",
+                100: "#D6F2FE",
+                200: "#ADE2FE",
+                300: "#84CDFE",
+                400: "#65B9FD",
+                500: "#3398FD",
+                600: "#2576D9",
+                700: "#1958B6",
+                800: "#103D92",
+                900: "#092B79",
+                DEFAULT: "#2576D9",
+                foreground: "#ffffff",
+              },
+              focus: "#3398FD",
+            },
+            layout: {
+              disabledOpacity: "0.3",
+              radius: {
+                small: "4px",
+                medium: "6px",
+                large: "8px",
+              },
+              borderWidth: {
+                small: "1px",
+                medium: "2px",
+                large: "3px",
+              },
+            },
           },
-          focus: "#3398FD",
-        },
-        layout: {
-          disabledOpacity: "0.3",
-          radius: {
-            small: "4px",
-            medium: "6px",
-            large: "8px",
-          },
-          borderWidth: {
-            small: "1px",
-            medium: "2px",
-            large: "3px",
-          },
-        },
-      },
-    }
-  }),]
+        }
+      }),
+      require('flowbite/plugin')
+    ],
 }
 
