@@ -1,17 +1,16 @@
-import { Banner } from "./components/Banner";
-import { Header } from "./components/Header";
 import { NextUIProvider } from "@nextui-org/react";
-import { Offer } from "./components/Offers";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./routes/Home";
+import { All } from "./routes/All";
 
 export const App = () => {
   return (
     <>
       <NextUIProvider>
-        <div className="w-full bg-primary-100 myTheme">
-          <Header></Header>
-          <Banner></Banner>
-          <Offer></Offer>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="all" element={<All />}></Route>
+        </Routes>
       </NextUIProvider>
     </>
   );
