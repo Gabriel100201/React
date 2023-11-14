@@ -3,7 +3,7 @@ export const Filters = () => {
     <section className="flex w-1/5 flex-col items-center justify-start gap-12 bg-primary-50 px-5 py-20">
       <div className="flex flex-col items-center justify-center">
         <span className="text-lg">Precio Máximo</span>
-        <input type="range" />
+        <input type="range" min="0" max="100000" step="100" />
         <label htmlFor="price" className="text-lg">
           $1000
         </label>
@@ -45,6 +45,18 @@ export const Filters = () => {
             La Liga
           </label>
           <input type="checkbox" />
+        </div>
+        <div className="mt-10 flex w-full items-center justify-between">
+          <label className="font-semibold" htmlFor="La Liga">
+            Ofertas
+          </label>
+          <input type="checkbox" className="checked:bg-green-600" />
+        </div>
+        <div className="mt-1 flex w-full items-center justify-between">
+          <label className="font-semibold" htmlFor="La Liga">
+            Envio Gratis
+          </label>
+          <input type="checkbox" className="checked:bg-green-600" />
         </div>
       </div>
     </section>
