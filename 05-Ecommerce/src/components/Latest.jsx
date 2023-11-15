@@ -1,5 +1,6 @@
 import { ProductCard } from "./ProductCard";
 import products from "../mocks/products.json";
+import { Link } from "react-router-dom";
 
 export const Latest = () => {
   return (
@@ -32,11 +33,11 @@ export const Latest = () => {
           })}
       </div>
       <div className="flex w-full items-center justify-center">
-        <a href="#">
+        <Link to="all">
           <span className="text-xl font-semibold text-primary-900">
             Ver más ➜
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );

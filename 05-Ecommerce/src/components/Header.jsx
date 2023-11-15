@@ -4,12 +4,15 @@ import { CiShoppingCart } from "react-icons/ci";
 import { HiBellAlert } from "react-icons/hi2";
 import { RxAvatar } from "react-icons/rx";
 import logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <header className="d-padding flex h-20 w-full items-center justify-between bg-primary-50 bg-gradient-to-r drop-shadow-md">
       <div className="w-36">
-        <img src={logo} alt="Logo de la empresa" className="h-14" />
+        <Link to="/">
+          <img src={logo} alt="Logo de la empresa" className="h-14" />
+        </Link>
       </div>
       <div>
         <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
