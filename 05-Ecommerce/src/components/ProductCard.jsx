@@ -1,9 +1,13 @@
 import { Card, CardFooter, Image } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 export const ProductCard = ({ off, name, description, price, imageUrl }) => {
   const prevPrice = price + price * (off / 100);
   return (
-    <a href={`http://localhost:5173/${name}`}>
+    <Link
+      to={"/products/" + name}
+      state={{ name, description, off, price, imageUrl }}
+    >
       <Card className=" w-full">
         <Image
           removeWrapper
@@ -33,6 +37,6 @@ export const ProductCard = ({ off, name, description, price, imageUrl }) => {
           </div>
         </CardFooter>
       </Card>
-    </a>
+    </Link>
   );
 };
