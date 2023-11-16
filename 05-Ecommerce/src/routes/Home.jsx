@@ -2,6 +2,7 @@ import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { Offer } from "../components/Offer";
 import { Latest } from "../components/Latest";
+import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
       <Banner></Banner>
       <Offer></Offer>
       <Latest></Latest>
+      <Footer></Footer>
     </div>
   );
 };
