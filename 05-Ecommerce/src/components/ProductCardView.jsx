@@ -54,10 +54,10 @@ export const ProductCardView = () => {
             <input className="w-20 rounded-xl" type="number" />
           </div>
           <div className="flex items-center justify-center gap-3">
-            <button className="rounded-full bg-primary-600 p-2 font-semibold text-primary-50">
+            <button className="rounded-full bg-primary-600 p-2 font-semibold text-lg text-primary-50">
               <CiShoppingCart className="text-3xl"></CiShoppingCart>
             </button>
-            <button className="rounded-xl bg-green-600 px-4 py-2 font-semibold text-primary-50">
+            <button className="rounded-xl bg-green-600 px-4 py-2 font-semibold text-lg w-32 text-primary-50">
               Comprar
             </button>
           </div>
