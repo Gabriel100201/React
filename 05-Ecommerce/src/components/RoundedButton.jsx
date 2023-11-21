@@ -10,11 +10,9 @@ export const RoundedButton = ({ children, text }) => {
   const [popAvtive, setPopActive] = useState(false);
 
   const handleEnter = () => {
-    console.log("Enter");
     setPopActive(true);
   };
   const handleLeave = () => {
-    console.log("Leave");
     setPopActive(false);
   };
 

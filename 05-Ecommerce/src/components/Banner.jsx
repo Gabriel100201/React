@@ -1,8 +1,10 @@
 import { Button } from "@nextui-org/react";
 import { Carousel } from "flowbite-react";
-import bannerInfo from "../mocks/bannerInfo.json";
+import { useBanner } from "../hooks/useBanner";
 
 export const Banner = () => {
+  const { products: bannerInfo, loading, error, getProducts } = useBanner();
+
   return (
     <Carousel>
       {bannerInfo &&

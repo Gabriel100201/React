@@ -1,11 +1,11 @@
 import { useReducer } from "react";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 // Crear el contexto
-export const ColorContext = createContext();
+export const cartContext = createContext();
 
 // Definimos un estado inicial y el recuctor, el cual indicara de que forma se va a actualizar el state
-const initialState = "bg-slate-400";
+const initialState = [];
 // State seria el valor anterior
 const reducer = (state, action) => {
   // Type es el tipo de accion que se debe ejecutar
@@ -30,7 +30,7 @@ const reducer = (state, action) => {
 };
 
 // Creamos el proveedor
-export const ColorProvider = ({ children }) => {
+export const cartProvider = ({ children }) => {
   //Declaramos state y dispatch con useReduce, y le pasamos el reducer y estado inicial previamente creados
   const [state, dispacth] = useReducer(reducer, initialState);
 

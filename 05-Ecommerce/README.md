@@ -1,4 +1,5 @@
-# React + Vite + Tailwind + Prettier
-
-Esta plantilla sirve como base para la creación de proyectos con React y TailwindCss.
-Además usando la combinación "Ctrl + Shift + P" y accediendo a Format Document se puede seleccionar Prettier como formateador estandar, y permitirle reordenar las clases automaticamente cuando se guarda el archivo mientras se encuentra activo el comanto "nmp run dev"
+- Crear contexto para carrito
+- Implementar carga y manejo de errores en la interfaz 
+- Implementar busqueda por palabras
+- Implementar filtros de busqueda
+- Implementar botones de ofertas y promociones. (Cargar la nueva vista con los filtros ya seleccionados)

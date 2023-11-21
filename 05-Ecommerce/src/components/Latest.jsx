@@ -1,8 +1,10 @@
 import { ProductCard } from "./ProductCard";
-import products from "../mocks/products.json";
 import { Link } from "react-router-dom";
+import { useProducts } from "../hooks/useProducts";
 
 export const Latest = () => {
+  const { products, loading, error, getProducts } = useProducts();
+  
   return (
     <div className="flex flex-col gap-10 bg-primary-100 px-80 py-10">
       <div className="flex items-center justify-between">

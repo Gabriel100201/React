@@ -1,7 +1,9 @@
 import { ProductCard } from "./ProductCard";
-import productsOffer from "../mocks/productsOffer.json";
+import { useProducts } from "../hooks/useProducts";
 
 export const Offer = () => {
+  const { products, loading, error, getProducts } = useProducts();
+
   return (
     <div className="flex flex-col gap-10 bg-primary-100 px-80 py-10">
       <div className="flex items-center justify-between">
@@ -15,8 +17,8 @@ export const Offer = () => {
         </a>
       </div>
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
-        {productsOffer &&
-          productsOffer.map((element, index) => {
+        {products &&
+          products.map((element, index) => {
             if (index <= 4) {
               return (
                 <ProductCard

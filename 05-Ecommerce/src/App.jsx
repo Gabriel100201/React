@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { All } from "./routes/All";
 import { ProductView } from "./routes/ProductView";
+import { CartProvider } from "./context/cart"; // Usando CartProvider con mayúscula al inicio
 
 export const App = () => {
   return (
-    <>
+    <CartProvider>
       <NextUIProvider>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -14,7 +15,7 @@ export const App = () => {
           <Route path="products/:infoProduct" element={<ProductView />}></Route>
         </Routes>
       </NextUIProvider>
-    </>
+    </CartProvider>
   );
 };
 
