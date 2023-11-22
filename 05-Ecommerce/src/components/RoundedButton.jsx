@@ -1,12 +1,9 @@
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  Button,
-} from "@nextui-org/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { cartContext } from "../context/cart";
 
 export const RoundedButton = ({ children, text }) => {
+  const { cart, count } = useContext(cartContext);
   const [popAvtive, setPopActive] = useState(false);
 
   const handleEnter = () => {
@@ -30,6 +27,11 @@ export const RoundedButton = ({ children, text }) => {
           <span className="transform font-semibold text-primary-800">
             {text}
           </span>
+          {count > 0 && text == "Cart" && (
+            <span className="ml-3 transform rounded-full bg-primary-400 px-3 font-semibold text-primary-50">
+              {count}
+            </span>
+          )}
         </div>
       )}
     </div>

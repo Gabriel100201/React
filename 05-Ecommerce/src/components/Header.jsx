@@ -5,12 +5,8 @@ import { HiBellAlert } from "react-icons/hi2";
 import { RxAvatar } from "react-icons/rx";
 import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { cartContext } from "../context/cart";
 
 export const Header = () => {
-  const { cart, addToCart } = useContext(cartContext);
-  console.log(cart);
   return (
     <header className="d-padding flex h-20 w-full items-center justify-between bg-primary-50 bg-gradient-to-r drop-shadow-md">
       <div className="w-36">

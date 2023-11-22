@@ -1,8 +1,15 @@
 import { useLocation } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
+import { useContext } from "react";
+import { cartContext } from "../context/cart";
+
 export const ProductCardView = () => {
   let { state } = useLocation();
+  const { cart, count, addToCart, removeToCart } = useContext(cartContext);
+  const handleCartClick = (ev) => {
+    addToCart(state);
+  };
   return (
     <section className="flex flex-wrap justify-center gap-3 bg-primary-100 px-64 py-20">
       <div className="flex h-[500px] min-w-fit grow items-center justify-center gap-4 py-5">
@@ -54,10 +61,13 @@ export const ProductCardView = () => {
             <input className="w-20 rounded-xl" type="number" />
           </div>
           <div className="flex items-center justify-center gap-3">
-            <button className="rounded-full bg-primary-600 p-2 font-semibold text-lg text-primary-50">
+            <button
+              onClick={handleCartClick}
+              className="rounded-full bg-primary-600 p-2 text-lg font-semibold text-primary-50"
+            >
               <CiShoppingCart className="text-3xl"></CiShoppingCart>
             </button>
-            <button className="rounded-xl bg-green-600 px-4 py-2 font-semibold text-lg w-32 text-primary-50">
+            <button className="w-32 rounded-xl bg-green-600 px-4 py-2 text-lg font-semibold text-primary-50">
               Comprar
             </button>
           </div>

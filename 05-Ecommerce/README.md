@@ -1,5 +1,6 @@
-- Crear contexto para carrito
+- Crear contexto para carrito ✅
 - Implementar carga y manejo de errores en la interfaz 
 - Implementar busqueda por palabras
 - Implementar filtros de busqueda
 - Implementar botones de ofertas y promociones. (Cargar la nueva vista con los filtros ya seleccionados)
+- Crear id unico para cada producto
