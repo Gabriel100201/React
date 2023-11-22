@@ -1,8 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { filtersContext } from "../context/filters";
+import { useLocation } from "react-router-dom";
 
 export const Filters = () => {
   const { filters, updateFilters } = useContext(filtersContext);
+  let { state } = useLocation();
+
+  const initialOffersState = state?.offers === true ? true : filters.offers;
 
   const handleCheckBox = (ev) => {
     const filterToUpdate = ev.target.value;
@@ -94,7 +98,7 @@ export const Filters = () => {
           <input
             type="checkbox"
             value={"offers"}
-            checked={filters.offers}
+            checked={initialOffersState}
             onChange={handleCheckBox}
             className="checked:bg-green-600"
           />

@@ -10,13 +10,22 @@ export const AllProducts = () => {
 
   const applyFilter = () => {
     const filtered = products.filter((product) => {
-      if (
+      const categoryFilter =
+        (filters.argentina && product.Category === "argentina") ||
+        (filters.offers && product.Category === "offers") ||
+        (filters.freeSend && product.Category === "freeSend") ||
+        (filters.mundiales && product.Category === "mundiales") ||
+        (filters.premier && product.Category === "premier") ||
+        (filters.bundesliga && product.Category === "bundesliga") ||
+        (filters.serieA && product.Category === "serieA") ||
+        (filters.laLiga && product.Category === "laLiga");
+
+      return (
         product.Off > filters.Off &&
         product.Precio <= filters.maxPrice &&
-        product.Precio >= filters.minPrice
-      )
-        return product.Off > filters.Off;
-      else return false;
+        product.Precio >= filters.minPrice &&
+        categoryFilter
+      );
     });
     setFilteredProducts(filtered);
   };

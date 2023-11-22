@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { Carousel } from "flowbite-react";
 import { useBanner } from "../hooks/useBanner";
+import { Link } from "react-router-dom";
 
 export const Banner = () => {
   const { products: bannerInfo, loading, error, getProducts } = useBanner();
@@ -24,7 +25,9 @@ export const Banner = () => {
                   {element.Description}
                 </h3>
                 <Button className="w-36 bg-primary-600 text-primary-50">
-                  {element.ButtonText}
+                  <Link to="all" state={{ offers: true }}>
+                    {element.ButtonText}
+                  </Link>
                 </Button>
               </div>
             </div>

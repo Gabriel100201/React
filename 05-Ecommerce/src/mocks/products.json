@@ -4,76 +4,87 @@
         "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
         "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
         "Precio": 1500,
-        "Off": 20
+        "Off": 20,
+        "Category": "mundiales"
     },
     {
         "Nombre": "Brazuca",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
         "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
         "Precio": 1800,
-        "Off": 20
+        "Off": 20,
+        "Category": "mundiales"
     },
     {
         "Nombre": "Telstar 18",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2018 en Rusia. Presenta un diseño inspirado en el icónico Telstar de 1970.",
         "Url": "https://www.digitalsport.com.ar/files/products/5a677e6eba64c-456347-500x500.jpg",
         "Precio": 1700,
-        "Off": 50
+        "Off": 50,
+        "Category": "mundiales"
     },
     {
         "Nombre": "Mitre Delta 1000",
         "Descripcion": "Balón utilizado en la liga inglesa durante la década de 1990. Reconocido por su calidad y durabilidad.",
         "Url": "https://i.ebayimg.com/images/g/OwsAAOSwjD9j-X2v/s-l1200.webp",
         "Precio": 1200,
-        "Off": 50
+        "Off": 50,
+        "Category": "argentina"
     },
     {
         "Nombre": "Tango España 1982 2",
         "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
         "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
         "Precio": 1500,
-        "Off": 50
+        "Off": 50,
+        "Category": "argentina"
     },
     {
         "Nombre": "Brazuca 2",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
         "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
         "Precio": 1800,
-        "Off": 50
+        "Off": 50,
+        "Category": "laLiga"
     },
     {
         "Nombre": "Telstar 18 2",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2018 en Rusia. Presenta un diseño inspirado en el icónico Telstar de 1970.",
         "Url": "https://www.digitalsport.com.ar/files/products/5a677e6eba64c-456347-500x500.jpg",
         "Precio": 1700,
-        "Off": 50
+        "Off": 50,
+        "Category": "laLiga"
     },
     {
         "Nombre": "Mitre Delta 1000 2",
         "Descripcion": "Balón utilizado en la liga inglesa durante la década de 1990. Reconocido por su calidad y durabilidad.",
         "Url": "https://i.ebayimg.com/images/g/OwsAAOSwjD9j-X2v/s-l1200.webp",
         "Precio": 1200,
-        "Off": 50
+        "Off": 50,
+        "Category": "laLiga"
     },
     {
         "Nombre": "Tango España 1982 3",
         "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
         "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
         "Precio": 1500,
-        "Off": 50
+        "Off": 50,
+        "Category": "premier"
     },
     {
         "Nombre": "Brazuca 3",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
         "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
         "Precio": 1800,
-        "Off": 50
+        "Off": 50,
+        "Category": "bundesliga"
     },
     {
         "Nombre": "Brazuca 3 3",
         "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
         "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
         "Precio": 1800,
-        "Off": null
+        "Off": null,
+        "Category": "bundesliga"
     }
 ]
