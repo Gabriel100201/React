@@ -4,3 +4,5 @@
 - Implementar filtros de busqueda
 - Implementar botones de ofertas y promociones. (Cargar la nueva vista con los filtros ya seleccionados)
 - Crear id unico para cada producto
+- Crear login previo antes de añadir un producto al carrito (protected view)
+- Hacer responsive

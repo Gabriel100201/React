@@ -1,15 +1,25 @@
 import { useLocation } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../context/cart";
 
 export const ProductCardView = () => {
   let { state } = useLocation();
-  const { cart, count, addToCart, removeToCart } = useContext(cartContext);
-  const handleCartClick = (ev) => {
-    addToCart(state);
+  const { addToCart } = useContext(cartContext);
+  const [countToAdd, setCountToAdd] = useState(1);
+
+  const handleCartClick = () => {
+    addToCart(state, countToAdd);
   };
+
+  const handleInput = (ev) => {
+    let value = ev.target.value.trim();
+    value = value === "" ? 1 : parseInt(value);
+    if (value <= 0) value = 1;
+    setCountToAdd(parseInt(value));
+  };
+
   return (
     <section className="flex flex-wrap justify-center gap-3 bg-primary-100 px-64 py-20">
       <div className="flex h-[500px] min-w-fit grow items-center justify-center gap-4 py-5">
@@ -58,7 +68,11 @@ export const ProductCardView = () => {
             <label htmlFor="" className="text-gray-600">
               Cantidad
             </label>
-            <input className="w-20 rounded-xl" type="number" />
+            <input
+              onChange={handleInput}
+              className="w-20 rounded-xl"
+              type="number"
+            />
           </div>
           <div className="flex items-center justify-center gap-3">
             <button

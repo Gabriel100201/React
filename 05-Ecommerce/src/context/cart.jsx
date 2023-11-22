@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
       newItem.count += cant;
       return;
     }
-    newItem.count = 1;
+    newItem.count = cant;
     setCart([...cart, newItem]);
     setCount(count + 1);
   };

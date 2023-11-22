@@ -4,8 +4,6 @@ import offers from "../mocks/productsOffer.json"
 import banner from "../mocks/bannerInfo.json"
 export const productsFetch = async () => {
     try {
-        /* const response = await fetch(apiURL);
-        const data = await response.json(); */
         const data = products
         return data;
     } catch (error) {
