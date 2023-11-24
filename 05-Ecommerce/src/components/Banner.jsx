@@ -7,7 +7,7 @@ export const Banner = () => {
   const { products: bannerInfo, loading, error, getProducts } = useBanner();
 
   return (
-    <Carousel>
+    <Carousel className="z-0">
       {bannerInfo &&
         bannerInfo.map((element, index) => {
           return (

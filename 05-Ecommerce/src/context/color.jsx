@@ -12,7 +12,6 @@ const reducer = (state, action) => {
   // payload es el valor que se debe usar para actualizar el estado
   const { type: actionType, payload: actionPayload } = action;
 
-  console.log(state);
   switch (actionType) {
     case "SET_COLOR_BLUE": {
       const newColor = actionPayload;

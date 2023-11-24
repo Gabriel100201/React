@@ -10,7 +10,6 @@ export const Filters = () => {
 
   useEffect(() => {
     if (initialOffersState == true) {
-      console.log("INITIAL STATE TRUE")
       updateFilters("offers", true)
       }
   },[])
