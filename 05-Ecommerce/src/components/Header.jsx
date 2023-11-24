@@ -34,7 +34,7 @@ export const Header = () => {
           <RoundedButton text="Notify">
             <HiBellAlert className="mr-[1px] text-2xl text-sky-800" />
           </RoundedButton>
-          <RoundedButton text="Cart">
+          <RoundedButton open={true} text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </RoundedButton>
           <RoundedButton text="Profile">

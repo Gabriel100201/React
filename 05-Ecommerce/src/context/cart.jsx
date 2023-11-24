@@ -16,8 +16,8 @@ export const CartProvider = ({ children }) => {
     setCount(count + 1);
   };
 
-  const removeToCart = (value) => {
-    const updatedCart = cart.filter((item) => item !== value);
+  const removeToCart = (id) => {
+    const updatedCart = cart.filter((item) => item.name !== id);
     setCart(updatedCart);
     setCount(count - 1);
   };

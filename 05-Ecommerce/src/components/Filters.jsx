@@ -5,15 +5,22 @@ import { useLocation } from "react-router-dom";
 export const Filters = () => {
   const { filters, updateFilters } = useContext(filtersContext);
   let { state } = useLocation();
-
+  
   const initialOffersState = state?.offers === true ? true : filters.offers;
+
+  useEffect(() => {
+    if (initialOffersState == true) {
+      console.log("INITIAL STATE TRUE")
+      updateFilters("offers", true)
+      }
+  },[])
 
   const handleCheckBox = (ev) => {
     const filterToUpdate = ev.target.value;
     const valueToFilter = ev.target.checked ? true : false;
     updateFilters(filterToUpdate, valueToFilter);
   };
-
+  
   return (
     <section className="flex w-1/5 flex-col items-center justify-start gap-12 bg-primary-50 px-5 py-20">
       <div className="flex flex-col items-center justify-center">
@@ -98,7 +105,7 @@ export const Filters = () => {
           <input
             type="checkbox"
             value={"offers"}
-            checked={initialOffersState}
+            checked={filters.offers}
             onChange={handleCheckBox}
             className="checked:bg-green-600"
           />
