@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { cartContext } from "../context/cart";
+import { CartContext } from "../context/cart";
 import { PopoverContent, PopoverTrigger, Popover } from "@nextui-org/react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import EmptyBag from "../assets/bag-svgrepo-com.svg"
 
 export const RoundedButton = ({ children, text, open = false }) => {
-  const { cart, count, removeToCart } = useContext(cartContext);
+  const { cart, count, removeToCart } = useContext(CartContext);
   const [popAvtive, setPopActive] = useState(false);
 
   const hanndleRemove = (ev) => {

@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const filtersContext = createContext();
+export const FiltersContext = createContext();
 
 export const FiltersProvider = ({ children }) => {
   const [filters, setFilters] = useState({
@@ -25,8 +25,8 @@ export const FiltersProvider = ({ children }) => {
   };
 
   return (
-    <filtersContext.Provider value={{ filters, updateFilters }}>
+    <FiltersContext.Provider value={{ filters, updateFilters }}>
       {children}
-    </filtersContext.Provider>
+    </FiltersContext.Provider>
   );
 };

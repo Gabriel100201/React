@@ -2,11 +2,11 @@ import { useLocation } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
 import { useContext, useState } from "react";
-import { cartContext } from "../context/cart";
+import { CartContext } from "../context/cart";
 
 export const ProductCardView = () => {
   let { state } = useLocation();
-  const { addToCart } = useContext(cartContext);
+  const { addToCart } = useContext(CartContext);
   const [countToAdd, setCountToAdd] = useState(1);
 
   const handleCartClick = () => {

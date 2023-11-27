@@ -1,32 +1,36 @@
 import { useContext, useEffect } from "react";
-import { filtersContext } from "../context/filters";
+import { FiltersContext } from "../context/filters";
 import { useLocation } from "react-router-dom";
 
 export const Filters = () => {
-  const { filters, updateFilters } = useContext(filtersContext);
+  const { filters, updateFilters } = useContext(FiltersContext);
   let { state } = useLocation();
-  
+
   const initialOffersState = state?.offers === true ? true : filters.offers;
 
   useEffect(() => {
     if (initialOffersState == true) {
       updateFilters("offers", true)
-      }
-  },[])
+    }
+  }, [])
 
   const handleCheckBox = (ev) => {
     const filterToUpdate = ev.target.value;
     const valueToFilter = ev.target.checked ? true : false;
     updateFilters(filterToUpdate, valueToFilter);
   };
-  
+  const handlePrice = (ev) => {
+    const newPrice = ev.target.value;
+    updateFilters("maxPrice", newPrice)
+  }
+
   return (
     <section className="flex w-1/5 flex-col items-center justify-start gap-12 bg-primary-50 px-5 py-20">
       <div className="flex flex-col items-center justify-center">
         <span className="text-md">Precio Máximo</span>
-        <input type="range" min="0" max="100000" step="100" />
+        <input value={filters.maxPrice} onChange={handlePrice} type="range" min="0" max="10000" step="100" />
         <label htmlFor="price" className="text-md">
-          $1000
+          ${filters.maxPrice}
         </label>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-1 px-12">

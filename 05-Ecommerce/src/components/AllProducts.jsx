@@ -1,10 +1,10 @@
 import { ProductCard } from "./ProductCard";
 import { useProducts } from "../hooks/useProducts.js";
 import { useContext, useEffect, useState } from "react";
-import { filtersContext } from "../context/filters.jsx";
+import { FiltersContext } from "../context/filters.jsx";
 
 export const AllProducts = () => {
-  const { filters } = useContext(filtersContext);
+  const { filters } = useContext(FiltersContext);
   const { products } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState(products);
 
