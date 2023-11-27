@@ -7,7 +7,7 @@ export const Banner = () => {
   const { products: bannerInfo, loading, error, getProducts } = useBanner();
 
   return (
-    <Carousel className="z-0">
+    <Carousel>
       {bannerInfo &&
         bannerInfo.map((element, index) => {
           return (
@@ -31,6 +31,7 @@ export const Banner = () => {
                 </Button>
               </div>
             </div>
+
           );
         })}
     </Carousel>

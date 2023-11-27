@@ -14,7 +14,7 @@ export const FiltersProvider = ({ children }) => {
     bundesliga: true,
     serieA: true,
     laLiga: true,
-    Off: 40,
+    Off: 0,
   });
 
   const updateFilters = (target, value) => {
