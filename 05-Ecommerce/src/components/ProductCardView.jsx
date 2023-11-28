@@ -70,6 +70,7 @@ export const ProductCardView = () => {
             </label>
             <input
               onChange={handleInput}
+              value={countToAdd}
               className="w-20 rounded-xl"
               type="number"
             />
@@ -77,7 +78,7 @@ export const ProductCardView = () => {
           <div className="flex items-center justify-center gap-3">
             <button
               onClick={handleCartClick}
-              className="rounded-full bg-primary-600 p-2 text-lg font-semibold text-primary-50"
+              className="rounded-full active:bg-primary-400 hover:bg-primary-700 bg-primary-600 p-2 text-lg font-semibold text-primary-50"
             >
               <CiShoppingCart className="text-3xl"></CiShoppingCart>
             </button>
