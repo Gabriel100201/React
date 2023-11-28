@@ -4,17 +4,22 @@ import { Home } from "./routes/Home";
 import { All } from "./routes/All";
 import { ProductView } from "./routes/ProductView";
 import { CartProvider } from "./context/cart"; // Usando CartProvider con mayúscula al inicio
+import { FiltersProvider } from "./context/filters.jsx";
+import { Header } from "./components/Header.jsx";
 
 export const App = () => {
   return (
     <CartProvider>
-      <NextUIProvider>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="all" element={<All />}></Route>
-          <Route path="products/:infoProduct" element={<ProductView />}></Route>
-        </Routes>
-      </NextUIProvider>
+      <FiltersProvider>
+        <NextUIProvider>
+          <Header></Header>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="all" element={<All />}></Route>
+            <Route path="products/:infoProduct" element={<ProductView />}></Route>
+          </Routes>
+        </NextUIProvider>
+      </FiltersProvider>
     </CartProvider>
   );
 };

@@ -2,11 +2,23 @@ import { ProductCard } from "./ProductCard";
 import { useProducts } from "../hooks/useProducts.js";
 import { useContext, useEffect, useState } from "react";
 import { FiltersContext } from "../context/filters.jsx";
+import { useSearch } from "../hooks/useSearch";
 
 export const AllProducts = () => {
   const { filters } = useContext(FiltersContext);
   const { products } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const { searchResults, setLowerSearch } = useSearch();
+
+  useEffect(() => {
+    console.log("FILTERS CHANGED")
+    setLowerSearch(filters.word)
+  }, [filters])
+
+
+  useEffect(() => {
+    console.log(searchResults)
+  }, [searchResults])
 
   const applyFilter = () => {
     const filtered = products.filter((product) => {

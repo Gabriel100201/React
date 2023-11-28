@@ -8,7 +8,6 @@ export const All = () => {
   return (
     <FiltersProvider>
       <div className="w-full bg-primary-100 myTheme">
-        <Header></Header>
         <section className="flex h-full justify-between">
           <Filters></Filters>
           <AllProducts></AllProducts>
