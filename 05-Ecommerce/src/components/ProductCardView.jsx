@@ -1,10 +1,12 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/cart";
 
 export const ProductCardView = () => {
+  const phoneNumber = "5492644601971"
+  
   let { state } = useLocation();
   const { addToCart } = useContext(CartContext);
   const [countToAdd, setCountToAdd] = useState(1);
@@ -82,9 +84,11 @@ export const ProductCardView = () => {
             >
               <CiShoppingCart className="text-3xl"></CiShoppingCart>
             </button>
-            <button className="w-32 rounded-xl bg-green-600 px-4 py-2 text-lg font-semibold text-primary-50">
-              Comprar
-            </button>
+            <Link to={`https://wa.me/${phoneNumber}?text=Estoy interesado en: ${state.name}`}>
+              <button className="w-32 active:bg-green-400 hover:bg-green-700 rounded-xl bg-green-600 px-4 py-2 text-lg font-semibold text-primary-50">
+                Comprar
+              </button>
+            </Link>
           </div>
         </div>
       </div>
