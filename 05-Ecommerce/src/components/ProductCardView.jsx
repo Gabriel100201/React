@@ -6,7 +6,7 @@ import { CartContext } from "../context/cart";
 import { phoneNumber } from "../constants/infoBuy";
 
 export const ProductCardView = () => {
-  
+
   let { state } = useLocation();
   const { addToCart } = useContext(CartContext);
   const [countToAdd, setCountToAdd] = useState(1);
@@ -23,14 +23,14 @@ export const ProductCardView = () => {
   };
 
   return (
-    <section className="flex flex-wrap justify-center gap-3 bg-primary-100 px-64 py-20">
-      <div className="flex h-[500px] min-w-fit grow items-center justify-center gap-4 py-5">
+    <section className="flex flex-wrap justify-center gap-3 bg-primary-100 px-10 lg:px-56 py-10 sm:py-20">
+      <div className="flex flex-col sm:flex-row h-[300px] sm:h-[500px] min-w-fit grow items-center justify-center gap-4 py-7">
         <img
           className="h-full rounded-lg bg-gray-300"
           src={state.imageUrl}
           alt={state.name}
         />
-        <div className="flex h-full min-w-fit flex-col justify-between">
+        <div className="flex h-full min-w-fit sm:flex-col flex-row gap-1 sm:gap-0 justify-between">
           <img
             className="h-[33%] w-full rounded-lg bg-gray-300 object-contain hover:opacity-70"
             src={state.imageUrl}
@@ -48,22 +48,22 @@ export const ProductCardView = () => {
           />
         </div>
       </div>
-      <div className="flex h-[500px] w-2/5 grow flex-col items-start justify-between gap-3 rounded-lg bg-gray-100 p-12">
-        <div className="flex flex-col gap-2">
-          <h3 className="mb-2 text-3xl font-semibold text-primary-900">
+      <div className="flex h-[400px] lg:h-[500px] w-2/5 min-w-[300px] max-w-[600px] grow flex-col items-start justify-between gap-3 rounded-lg bg-gray-100 p-7 lg:p-12">
+        <div className="flex flex-col gap-2 text-center lg:text-start">
+          <h3 className="mb-2 text-xl lg:text-3xl font-semibold text-primary-900">
             {state.name}
           </h3>
-          <h4 className="text-xl font-semibold text-gray-600">
+          <h4 className="lg:text-xl text-md font-semibold text-gray-600">
             Stock Disponible
           </h4>
-          <span className="text-3xl font-semibold text-primary-900">
+          <span className="lg:text-3xl text-xl font-semibold text-primary-900">
             ${state.price}
           </span>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col lg:flex-row items-center gap-1 sm:gap-3">
             <Rating readOnly value={4}></Rating>
             <span>10 opiniones</span>
           </div>
-          <p className="text-lg text-primary-900">{state.description}</p>
+          <p className="lg:text-lg text-md text-primary-900">{state.description}</p>
         </div>
         <div className="mt-5 flex w-full items-center justify-between">
           <div className="flex flex-col items-center justify-center">
