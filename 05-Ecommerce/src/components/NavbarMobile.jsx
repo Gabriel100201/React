@@ -26,7 +26,7 @@ export const NavbarMobile = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+        <NavbarBrand className="hidden sm:flex">
           <Link to={"/"}>
             <img className="w-32" src={Logo} alt="Logo" />
           </Link>
@@ -51,6 +51,12 @@ export const NavbarMobile = () => {
         </nav>
       </NavbarContent>
 
+      <NavbarContent className="flex sm:hidden" justify="end">
+        <RoundedButton open={true} text="Cart">
+          <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
+        </RoundedButton>
+      </NavbarContent>
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
@@ -67,6 +73,9 @@ export const NavbarMobile = () => {
             </Link>
           </NavbarMenuItem>
         ))}
+        <div className="w-full px-32 h-full flex justify-end">
+        <img src={Logo} alt="" />
+        </div>
       </NavbarMenu>
     </Navbar>
   )

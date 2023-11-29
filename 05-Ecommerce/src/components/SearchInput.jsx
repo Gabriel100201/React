@@ -22,13 +22,13 @@ export const SearchInput = () => {
 
   return (
     <div>
-      <div className="flex h-10 place-content-center opacity-90 hover:opacity-100">
-        <form onSubmit={handleSubmit}>
+      <div className="flex h-9 place-content-center opacity-90 hover:opacity-100">
+        <form className="flex justify-center items-center" onSubmit={handleSubmit}>
           <input
             value={inputValue}
             onChange={handleChange}
-            placeholder="¿Qué desea buscar?"
-            className="h-full w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] rounded-bl-xl rounded-tl-xl border-none bg-primary-200/70 px-5 text-primary-800 outline-none"
+            placeholder="Buscar en BallShopp"
+            className="h-full w-full rounded-bl-xl rounded-tl-xl border-none bg-primary-200/70 px-5 text-primary-800 outline-none"
             type="text"
             size={28}
           />
