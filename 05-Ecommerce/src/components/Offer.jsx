@@ -1,5 +1,6 @@
 import { ProductCard } from "./ProductCard";
 import { useProducts } from "../hooks/useProducts";
+import { Link } from "react-router-dom";
 
 export const Offer = () => {
   const { products, loading, error, getProducts } = useProducts();
@@ -10,11 +11,11 @@ export const Offer = () => {
         <span className="text-xl font-semibold text-primary-900">
           Las mejores ofertas de este mes 🔥
         </span>
-        <a href="#">
+        <Link to={"all"}>
           <span className="text-lg font-semibold text-primary-700">
             Ver más ➜
           </span>
-        </a>
+        </Link>
       </div>
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
         {products &&

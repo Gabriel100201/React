@@ -11,17 +11,15 @@ export const AllProducts = () => {
   const { searchResults, setLowerSearch } = useSearch();
 
   useEffect(() => {
-    console.log("FILTERS CHANGED")
-    setLowerSearch(filters.word)
-  }, [filters])
-
+    setLowerSearch(filters.word);
+  }, [filters]);
 
   useEffect(() => {
-    console.log(searchResults)
+    setFilteredProducts(searchResults)
   }, [searchResults])
 
   const applyFilter = () => {
-    const filtered = products.filter((product) => {
+    const filtered = searchResults .filter((product) => {
       const categoryFilter =
         (filters.argentina && product.Category === "argentina") ||
         (filters.offers && product.Category === "offers") ||

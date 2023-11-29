@@ -4,18 +4,18 @@ import { useProducts } from "../hooks/useProducts";
 
 export const Latest = () => {
   const { products, loading, error, getProducts } = useProducts();
-  
+
   return (
     <div className="flex flex-col gap-10 bg-primary-100 px-80 py-10">
       <div className="flex items-center justify-between">
         <span className="text-xl font-semibold text-primary-900">
           Últimos añadidos ⏲️
         </span>
-        <a href="#">
+        <Link to={"all"}>
           <span className="text-lg font-semibold text-primary-700">
             Ver Todos ➜
           </span>
-        </a>
+        </Link>
       </div>
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
         {products &&

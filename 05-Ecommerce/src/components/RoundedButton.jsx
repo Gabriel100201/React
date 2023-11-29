@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/cart";
-import { PopoverContent, PopoverTrigger, Popover } from "@nextui-org/react";
+import { PopoverContent, PopoverTrigger, Popover, button } from "@nextui-org/react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import EmptyBag from "../assets/bag-svgrepo-com.svg"
+import { Link } from "react-router-dom";
+import { phoneNumber } from "../constants/infoBuy";
 
 export const RoundedButton = ({ children, text, open = false }) => {
   const { cart, count, removeToCart } = useContext(CartContext);
@@ -57,7 +59,17 @@ export const RoundedButton = ({ children, text, open = false }) => {
                       </div>
                     </div>
                   )
-                })
+                }
+                )
+              }
+              {
+                cart && (cart.length > 0) &&
+                <button className="w-full bg-green-500 text-primary-50 font-semibold rounded-lg py-1 flex justify-center items-center">
+                  <Link target="_blank" to={`https://wa.me/${phoneNumber}?text=Estoy interesado en: ${cart.map(product => product.name).join(" - ")}`}>
+                    Comprar
+                  </Link>
+                </button>
+
               }
               {cart && (cart.length == 0) && (
                 <div className="px-2 py-1 text-center flex flex-col justify-center items-center">
@@ -71,18 +83,20 @@ export const RoundedButton = ({ children, text, open = false }) => {
         }
       </Popover>
 
-      {popAvtive && (
-        <div className="absolute left-1/2 top-16 z-50 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-200 p-3 py-2">
-          <span className="transform font-semibold text-primary-800">
-            {text}
-          </span>
-          {count > 0 && text == "Cart" && (
-            <span className="ml-3 transform rounded-full bg-primary-400 px-3 font-semibold text-primary-50">
-              {count}
+      {
+        popAvtive && (
+          <div className="absolute left-1/2 top-16 z-50 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-200 p-3 py-2">
+            <span className="transform font-semibold text-primary-800">
+              {text}
             </span>
-          )}
-        </div>
-      )}
-    </div>
+            {count > 0 && text == "Cart" && (
+              <span className="ml-3 transform rounded-full bg-primary-400 px-3 font-semibold text-primary-50">
+                {count}
+              </span>
+            )}
+          </div>
+        )
+      }
+    </div >
   );
 };

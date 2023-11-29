@@ -3,9 +3,9 @@ import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/cart";
+import { phoneNumber } from "../constants/infoBuy";
 
 export const ProductCardView = () => {
-  const phoneNumber = "5492644601971"
   
   let { state } = useLocation();
   const { addToCart } = useContext(CartContext);

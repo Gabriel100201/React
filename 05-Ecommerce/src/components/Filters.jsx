@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
 import { FiltersContext } from "../context/filters";
 import { useLocation } from "react-router-dom";
+import { FaDeleteLeft } from "react-icons/fa6";
+
 
 export const Filters = () => {
   const { filters, updateFilters } = useContext(FiltersContext);
@@ -23,9 +25,21 @@ export const Filters = () => {
     const newPrice = ev.target.value;
     updateFilters("maxPrice", newPrice)
   }
+  const handleWord = () => {
+    updateFilters("word", "")
+  }
 
   return (
     <section className="flex w-1/5 flex-col items-center justify-start gap-12 bg-primary-50 px-5 py-20">
+      {
+        filters.word != "" &&
+        <div className="bg-gray-300 flex justify-between items-center w-32 rounded-xl px-5">
+          <span className="text-center text-gray-600">{filters.word}</span>
+          <button onClick={handleWord} className="opacity-75">
+            <FaDeleteLeft />
+          </button>
+        </div>
+      }
       <div className="flex flex-col items-center justify-center">
         <span className="text-md">Precio Máximo</span>
         <input value={filters.maxPrice} onChange={handlePrice} type="range" min="0" max="10000" step="100" />

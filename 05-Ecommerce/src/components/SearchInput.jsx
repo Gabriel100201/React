@@ -8,7 +8,8 @@ export const SearchInput = () => {
   const [inputValue, setInputValue] = useState("");
   const { updateFilters } = useContext(FiltersContext)
 
-  const handleClick = () => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault()
     updateFilters("word", inputValue)
     if (window.location.pathname == "/all") return
     navigate("/all");
@@ -22,20 +23,21 @@ export const SearchInput = () => {
   return (
     <div>
       <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
-        <input
-          value={inputValue}
-          onChange={handleChange}
-          placeholder="¿Qué desea buscar?"
-          className="h-full w-[400px] rounded-bl-xl rounded-tl-xl border-none bg-primary-200 px-5 text-primary-800 outline-none"
-          type="text"
-        />
-        <button
-          onClick={handleClick}
-          className="h-full rounded-br-xl rounded-tr-xl bg-primary-800 px-3"
-          type="text"
-        >
-          <BsSearch className="font-semibold text-primary-50" />
-        </button>
+        <form onSubmit={handleSubmit}>
+          <input
+            value={inputValue}
+            onChange={handleChange}
+            placeholder="¿Qué desea buscar?"
+            className="h-full w-[400px] rounded-bl-xl rounded-tl-xl border-none bg-primary-200 px-5 text-primary-800 outline-none"
+            type="text"
+          />
+          <button
+            className="h-full rounded-br-xl rounded-tr-xl bg-primary-800 px-3"
+            type="text"
+          >
+            <BsSearch className="font-semibold text-primary-50" />
+          </button>
+        </form>
       </div>
     </div>
   )
