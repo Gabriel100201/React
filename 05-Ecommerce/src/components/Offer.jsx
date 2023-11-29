@@ -6,7 +6,7 @@ export const Offer = () => {
   const { products, loading, error, getProducts } = useProducts();
 
   return (
-    <div className="flex flex-col gap-10 bg-primary-100 px-80 py-10">
+    <div className="flex flex-col gap-10 bg-primary-100 d-padding py-10">
       <div className="flex items-center justify-between">
         <span className="text-xl font-semibold text-primary-900">
           Las mejores ofertas de este mes 🔥

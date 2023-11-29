@@ -30,7 +30,7 @@ export const RoundedButton = ({ children, text, open = false }) => {
             onClick={handleLeave}
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
-            className="flex items-center justify-center rounded-full bg-primary-50 p-2 hover:bg-primary-200"
+            className="flex items-center justify-center rounded-full  p-2 hover:bg-primary-200"
           >
             {children}
           </button>

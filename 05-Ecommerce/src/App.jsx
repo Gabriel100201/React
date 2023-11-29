@@ -6,13 +6,14 @@ import { ProductView } from "./routes/ProductView";
 import { CartProvider } from "./context/cart"; // Usando CartProvider con mayúscula al inicio
 import { FiltersProvider } from "./context/filters.jsx";
 import { Header } from "./components/Header.jsx";
+import { NavbarMobile } from "./components/NavbarMobile.jsx";
 
 export const App = () => {
   return (
     <CartProvider>
       <FiltersProvider>
         <NextUIProvider>
-          <Header></Header>
+          <NavbarMobile></NavbarMobile>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="all" element={<All />}></Route>

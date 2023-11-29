@@ -22,14 +22,15 @@ export const SearchInput = () => {
 
   return (
     <div>
-      <div className="flex h-10 place-content-center opacity-80 hover:opacity-100">
+      <div className="flex h-10 place-content-center opacity-90 hover:opacity-100">
         <form onSubmit={handleSubmit}>
           <input
             value={inputValue}
             onChange={handleChange}
             placeholder="¿Qué desea buscar?"
-            className="h-full w-[400px] rounded-bl-xl rounded-tl-xl border-none bg-primary-200 px-5 text-primary-800 outline-none"
+            className="h-full w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] rounded-bl-xl rounded-tl-xl border-none bg-primary-200/70 px-5 text-primary-800 outline-none"
             type="text"
+            size={28}
           />
           <button
             className="h-full rounded-br-xl rounded-tr-xl bg-primary-800 px-3"

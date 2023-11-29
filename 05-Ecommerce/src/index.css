@@ -6,8 +6,15 @@
     transition: background-color .2s;
 }
 body{
-    background-color: #111;
+    background-color: #66aaf9;
 }
 .d-padding{
-    padding: 0 20rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+@media (min-width: 1300px) {
+    .d-padding{
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
 }
