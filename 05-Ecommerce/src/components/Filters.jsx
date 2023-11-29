@@ -3,7 +3,6 @@ import { FiltersContext } from "../context/filters";
 import { useLocation } from "react-router-dom";
 import { FaDeleteLeft } from "react-icons/fa6";
 
-
 export const Filters = () => {
   const { filters, updateFilters } = useContext(FiltersContext);
   let { state } = useLocation();
@@ -30,22 +29,24 @@ export const Filters = () => {
   }
 
   return (
-    <section className="flex w-1/5 flex-col items-center justify-start gap-12 bg-primary-50 px-5 py-20">
-      {
-        filters.word != "" &&
-        <div className="bg-gray-300 flex justify-between items-center w-32 rounded-xl px-5">
-          <span className="text-center text-gray-600">{filters.word}</span>
-          <button onClick={handleWord} className="opacity-75">
-            <FaDeleteLeft />
-          </button>
+    <>
+      <div className="flex flex-row justify-center items-center sm:flex-col gap-5">
+        {
+          filters.word != "" &&
+          <div className="bg-gray-300 flex justify-between h-7 items-center w-32 rounded-xl px-5">
+            <span className="text-center text-gray-600">{filters.word}</span>
+            <button onClick={handleWord} className="opacity-75">
+              <FaDeleteLeft />
+            </button>
+          </div>
+        }
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-md">Precio Máximo</span>
+          <input value={filters.maxPrice} onChange={handlePrice} type="range" min="0" max="10000" step="100" />
+          <label htmlFor="price" className="text-md">
+            ${filters.maxPrice}
+          </label>
         </div>
-      }
-      <div className="flex flex-col items-center justify-center">
-        <span className="text-md">Precio Máximo</span>
-        <input value={filters.maxPrice} onChange={handlePrice} type="range" min="0" max="10000" step="100" />
-        <label htmlFor="price" className="text-md">
-          ${filters.maxPrice}
-        </label>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-1 px-12">
         <span className="text-md mb-5 text-center text-lg">Categorías</span>
@@ -127,7 +128,7 @@ export const Filters = () => {
             className="checked:bg-green-600"
           />
         </div>
-        <div className="mt-1 flex w-full items-center justify-between">
+        <div className="mt-1 flex w-full gap-3 items-center justify-between">
           <label className="font-semibold" htmlFor="La Liga">
             Envio Gratis
           </label>
@@ -140,6 +141,6 @@ export const Filters = () => {
           />
         </div>
       </div>
-    </section>
+    </>
   );
 };
