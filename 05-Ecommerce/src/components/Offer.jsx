@@ -9,15 +9,15 @@ export const Offer = () => {
     <div className="flex flex-col gap-10 bg-primary-100 d-padding py-10">
       <div className="flex items-center justify-between">
         <span className="text-xl font-semibold text-primary-900">
-          Las mejores ofertas de este mes 🔥
+          Las mejores ofertas de este mes
         </span>
         <Link to={"all"}>
-          <span className="text-lg font-semibold text-primary-700">
+          <span className="text-lg font-semibold text-primary-700 hidden sm:flex">
             Ver más ➜
           </span>
         </Link>
       </div>
-      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
+      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] items-center justify-center gap-10">
         {products &&
           products.map((element, index) => {
             if (index <= 4) {
