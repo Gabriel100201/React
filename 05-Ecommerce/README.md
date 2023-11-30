@@ -3,11 +3,11 @@
 - Implementar botones de ofertas y promociones. (Cargar la nueva vista con los filtros ya seleccionados) ✅
 - Implementar busqueda por precio ✅
 - Implementar busqueda por palabras ✅
+- Hacer responsive ✅
+- Arreglar interfaz de header ✅
+- Arreglar interfaz de ProductCardView ✅
 
-- Hacer responsive
 
-- Arreglar interfaz de header
-- Arreglar interfaz de ProductCardView
 - Implementar carga y manejo de errores en la interfaz
 
 - Crear login previo antes de añadir un producto al carrito (protected view)

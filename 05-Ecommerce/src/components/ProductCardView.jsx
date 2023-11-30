@@ -24,7 +24,7 @@ export const ProductCardView = () => {
 
   return (
     <section className="flex flex-wrap justify-center gap-3 bg-primary-100 px-10 lg:px-56 py-10 sm:py-20">
-      <div className="flex flex-col sm:flex-row h-[300px] sm:h-[500px] min-w-fit grow items-center justify-center gap-4 py-7">
+      <div className="flex flex-col mt-24 sm:mt-0 sm:flex-row h-[300px] sm:h-[500px] min-w-fit grow items-center justify-center gap-4 py-0">
         <img
           className="h-full rounded-lg bg-gray-300"
           src={state.imageUrl}
