@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { SearchInput } from "./SearchInput";
 
 export const Header = () => {
+
   return (
     <div className="w-full bg-primary-100 myTheme">
       <header className="d-padding flex h-20 w-full items-center justify-between bg-primary-50 bg-gradient-to-r drop-shadow-md">

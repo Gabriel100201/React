@@ -7,8 +7,6 @@
 - Arreglar interfaz de header ✅
 - Arreglar interfaz de ProductCardView ✅
 
-
 - Implementar carga y manejo de errores en la interfaz
-
 - Crear login previo antes de añadir un producto al carrito (protected view)
 - Crear vista de login

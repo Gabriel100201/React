@@ -3,12 +3,14 @@ import { useProducts } from "../hooks/useProducts.js";
 import { useContext, useEffect, useState } from "react";
 import { FiltersContext } from "../context/filters.jsx";
 import { useSearch } from "../hooks/useSearch";
+import noResults from "../assets/noProducts.png"
 
 export const AllProducts = () => {
   const { filters } = useContext(FiltersContext);
   const { products } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState(products);
   const { searchResults, setLowerSearch } = useSearch();
+  const [backgroundColor, setBackgroundColor] = useState("bg-primary-100");
 
   useEffect(() => {
     setLowerSearch(filters.word);
@@ -18,8 +20,16 @@ export const AllProducts = () => {
     setFilteredProducts(searchResults)
   }, [searchResults])
 
+  useEffect(() => {
+    applyFilter();
+  }, [filters, products]);
+
+  useEffect(() => {
+    setBackgroundColor(filteredProducts.length === 0 ? "bg-yellow-100" : "bg-primary-100");
+  }, [filteredProducts])
+
   const applyFilter = () => {
-    const filtered = searchResults .filter((product) => {
+    const filtered = searchResults.filter((product) => {
       const categoryFilter =
         (filters.argentina && product.Category === "argentina") ||
         (filters.offers && product.Category === "offers") ||
@@ -40,12 +50,8 @@ export const AllProducts = () => {
     setFilteredProducts(filtered);
   };
 
-  useEffect(() => {
-    applyFilter();
-  }, [filters, products]);
-
   return (
-    <div className="flex w-full flex-col gap-10 bg-primary-100 px-10 sm:px-7 md:px-20 lg:px-40 py-20">
+    <div className={`flex w-full flex-col gap-10 ${backgroundColor} px-10 sm:px-7 md:px-20 lg:px-40 py-20`}>
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
         {filteredProducts &&
           filteredProducts.map((element, index) => {
@@ -62,6 +68,15 @@ export const AllProducts = () => {
               );
             }
           })}
+        {
+          filteredProducts.length == 0 &&
+          <div className="w-full flex justify-center items-center flex-col">
+            <img src={noResults} alt="no product image" className="w-full max-w-[300px]" />
+            <div className="flex justify-center items-center py-1 px-3 bg-yellow-300/80 rounded-full">
+              <span className="text-center text-md font-bold text-gray-600">No se encontraron productos</span>
+            </div>
+          </div>
+        }
       </div>
     </div>
   );
