@@ -4,7 +4,7 @@ import { LoginContext } from "../context/login";
 export const UserButton = ({ children, text }) => {
   const { isLogged } = useContext(LoginContext);
   const [popAvtive, setPopActive] = useState(false);
-  const [colorBorder, setColorBorder] = useState("")
+  const [bgColor, setBgColor] = useState("")
   // Funciones que activen el texto descriptivo de cada botón
   const handleEnter = () => {
     setPopActive(true);
@@ -13,8 +13,8 @@ export const UserButton = ({ children, text }) => {
     setPopActive(false);
   };
   useEffect(() => {
-    const color = isLogged ? "border-green-200" : "border-none";
-    setColorBorder(color);
+    const color = isLogged ? "bg-green-200/70" : "bg-none";
+    setBgColor(color);
   }, [isLogged])
 
   return (
@@ -23,7 +23,7 @@ export const UserButton = ({ children, text }) => {
         onClick={handleLeave}
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
-        className={`flex items-center justify-center rounded-full  p-2 hover:bg-primary-200 border-3 ${colorBorder}`}
+        className={`flex items-center justify-center rounded-full  p-2 hover:bg-primary-200 ${bgColor}`}
       >
         {children}
       </button>

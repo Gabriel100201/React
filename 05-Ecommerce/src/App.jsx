@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { All } from "./routes/All";
 import { ProductView } from "./routes/ProductView";
-import { CartProvider } from "./context/cart"; // Usando CartProvider con mayúscula al inicio
+import { CartProvider } from "./context/cart";
 import { FiltersProvider } from "./context/filters.jsx";
 import { NavbarMobile } from "./components/NavbarMobile.jsx";
 import { useEffect } from "react";
@@ -11,6 +11,7 @@ import { Footer } from "./components/Footer.jsx"
 import { Login } from "./routes/Login.jsx";
 import { ProtectedView } from "./components/ProtectedView.jsx";
 import { LoginProvider } from "./context/login.jsx";
+import { Toaster } from "sonner";
 
 export const App = () => {
   //Función que se ejecuta cada vez que se cambia el path
@@ -28,6 +29,7 @@ export const App = () => {
       <FiltersProvider>
         <LoginProvider>
           <NextUIProvider>
+            <Toaster richColors />
             <ScrollToTop></ScrollToTop>
             <NavbarMobile></NavbarMobile>
             <Routes>

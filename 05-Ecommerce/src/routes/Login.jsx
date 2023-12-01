@@ -25,7 +25,6 @@ export const Login = () => {
     animeLogin()
   }, [register])
 
-
   return (
     <section className="my-12">
       {

@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import users from "../mocks/users.json"
 import { LoginContext } from "../context/login"
 import { useNavigate } from "react-router-dom"
+import { toast } from "sonner"
 
 export const useAuth = () => {
     const navigate = useNavigate()
@@ -14,13 +15,14 @@ export const useAuth = () => {
             setLoginError(null)
             setLogged();
             navigate("/")
+            toast.success("Sesión iniciada con exito")
         } else {
-            const error = user ? "No se encontró el usuario" : "Contraseña incorrecta";
+            const error = user ? "Contraseña incorrecta" : "No se encontró el usuario";
             setLoginError(error)
-            setUnLogged();
+            toast.warning(error)
         }
     }
-
+    
     return {
         isLogged,
         tryAuth,

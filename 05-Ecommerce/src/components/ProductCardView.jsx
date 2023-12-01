@@ -17,7 +17,9 @@ export const ProductCardView = () => {
     if (!isLogged) {
       navigate("/login")
     }
-    addToCart(state, countToAdd);
+    else {
+      addToCart(state, countToAdd);
+    }
   };
 
   const handleInput = (ev) => {

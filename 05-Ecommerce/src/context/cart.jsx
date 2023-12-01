@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { toast } from "sonner";
 
 export const CartContext = createContext();
 
@@ -10,6 +11,7 @@ export const CartProvider = ({ children }) => {
     //find devuelve true si encuentra el elemento dentro del array
     if (cart.find((item) => item.name === newItem.name)) {
       newItem.count += cant;
+      toast.success("Producto agregado con éxito")
       return;
     }
     newItem.count = cant;
@@ -23,6 +25,7 @@ export const CartProvider = ({ children }) => {
     Si no los cambios no se veran reflejados en la interfaz */
     setCart([...cart, newItem]);
     setCount(count + 1);
+    toast.success("Producto agregado con éxito")
   };
 
   const removeToCart = (id) => {
@@ -30,6 +33,7 @@ export const CartProvider = ({ children }) => {
     const updatedCart = cart.filter((item) => item.name !== id);
     setCart(updatedCart);
     setCount(count - 1);
+    toast.success("Producto eliminado con éxito")
   };
 
   return (
