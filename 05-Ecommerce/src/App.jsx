@@ -7,6 +7,9 @@ import { CartProvider } from "./context/cart"; // Usando CartProvider con mayús
 import { FiltersProvider } from "./context/filters.jsx";
 import { NavbarMobile } from "./components/NavbarMobile.jsx";
 import { useEffect } from "react";
+import { Footer } from "./components/Footer.jsx"
+import { Login } from "./routes/Login.jsx";
+import { ProtectedView } from "./components/ProtectedView.jsx";
 
 export const App = () => {
   //Función que se ejecuta cada vez que se cambia el path
@@ -23,13 +26,19 @@ export const App = () => {
     <CartProvider>
       <FiltersProvider>
         <NextUIProvider>
-          <NavbarMobile></NavbarMobile>
           <ScrollToTop></ScrollToTop>
+          <NavbarMobile></NavbarMobile>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="all" element={<All />}></Route>
+            <Route path="all" element={
+              <ProtectedView>
+                <All />
+              </ProtectedView>
+            }></Route>
             <Route path="products/:infoProduct" element={<ProductView />}></Route>
+            <Route path="login" element={<Login />}></Route>
           </Routes>
+          <Footer></Footer>
         </NextUIProvider>
       </FiltersProvider>
     </CartProvider>

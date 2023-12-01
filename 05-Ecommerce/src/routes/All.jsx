@@ -1,6 +1,5 @@
 import { Filters } from "../components/Filters";
 import { AllProducts } from "../components/AllProducts";
-import { Footer } from "../components/Footer";
 import { OpenFilters } from "../components/OpenFilters";
 
 export const All = () => {
@@ -13,7 +12,6 @@ export const All = () => {
         </section>
         <AllProducts></AllProducts>
       </section>
-      <Footer></Footer>
     </div>
   );
 };

@@ -45,9 +45,11 @@ export const NavbarMobile = () => {
           <RoundedButton open={true} text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </RoundedButton>
-          <RoundedButton text="Profile">
-            <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
-          </RoundedButton>
+          <Link to={"/login"}>
+            <RoundedButton text="Profile">
+              <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
+            </RoundedButton>
+          </Link>
         </nav>
       </NavbarContent>
 
@@ -74,7 +76,7 @@ export const NavbarMobile = () => {
           </NavbarMenuItem>
         ))}
         <div className="w-full px-32 h-full flex justify-end">
-        <img src={Logo} alt="" />
+          <img src={Logo} alt="" />
         </div>
       </NavbarMenu>
     </Navbar>
