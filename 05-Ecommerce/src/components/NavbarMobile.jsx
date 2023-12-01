@@ -15,6 +15,10 @@ export const NavbarMobile = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const setMenuDefault = () => {
+    setIsMenuOpen(false)
+  }
+
   const menuItems = [
     "Perfil",
     "Notificaciones",
@@ -22,7 +26,7 @@ export const NavbarMobile = () => {
   ];
 
   return (
-    <Navbar className="shadow-lg" onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isMenuOpen={isMenuOpen} className="shadow-lg" onMenuOpenChange={setIsMenuOpen}>
 
       <NavbarContent justify="start">
         <NavbarMenuToggle
@@ -42,25 +46,17 @@ export const NavbarMobile = () => {
 
       <NavbarContent justify="end" className="hidden sm:flex" >
         <nav className="flex items-center myTheme justify-center gap-3]">
-          <UserButton text="Profile">
-            <Link to={"/login"}>
-              <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
-            </Link>
-          </UserButton>
           <CartButton text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </CartButton>
           <NotifyButton text="Notify">
             <HiBellAlert className="mr-[1px] text-2xl text-sky-800" />
           </NotifyButton>
-          {/* <RoundedButton open={true} text="Cart">
-            <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
-          </RoundedButton>
-          <Link to={"/login"}>
-            <RoundedButton text="Profile">
+          <UserButton text="Profile">
+            <Link to={"/login"}>
               <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
-            </RoundedButton>
-          </Link> */}
+            </Link>
+          </UserButton>
         </nav>
       </NavbarContent>
 
@@ -70,7 +66,7 @@ export const NavbarMobile = () => {
         </RoundedButton>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="p-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -86,9 +82,11 @@ export const NavbarMobile = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <div className="w-full px-32 h-full flex justify-end">
-          <img src={Logo} alt="" />
-        </div>
+        <Link onClick={setMenuDefault} to={"/"}>
+          <div className="w-full mt-48 h-full px-24">
+            <img src={Logo} alt="" />
+          </div>
+        </Link>
       </NavbarMenu>
     </Navbar>
   )
