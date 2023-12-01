@@ -22,7 +22,6 @@ export const Login = () => {
     isRegister(!register)
   }
   useEffect(() => {
-    console.log(register)
     animeLogin()
   }, [register])
 

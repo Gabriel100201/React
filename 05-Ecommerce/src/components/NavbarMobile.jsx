@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import { Navbar, NavbarBrand, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { SearchInput } from "./SearchInput";
 import { RoundedButton } from "./RoundedButton";
+import { UserButton } from "./UserButton";
+import { NotifyButton } from "./NotifyButton";
+import { CartButton } from "./CartButton";
 
 export const NavbarMobile = () => {
 
@@ -39,17 +42,25 @@ export const NavbarMobile = () => {
 
       <NavbarContent justify="end" className="hidden sm:flex" >
         <nav className="flex items-center myTheme justify-center gap-3]">
-          <RoundedButton text="Notify">
+          <UserButton text="Profile">
+            <Link to={"/login"}>
+              <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
+            </Link>
+          </UserButton>
+          <CartButton text="Cart">
+            <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
+          </CartButton>
+          <NotifyButton text="Notify">
             <HiBellAlert className="mr-[1px] text-2xl text-sky-800" />
-          </RoundedButton>
-          <RoundedButton open={true} text="Cart">
+          </NotifyButton>
+          {/* <RoundedButton open={true} text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </RoundedButton>
           <Link to={"/login"}>
             <RoundedButton text="Profile">
               <RxAvatar className="mr-[1px] text-2xl text-sky-800" />
             </RoundedButton>
-          </Link>
+          </Link> */}
         </nav>
       </NavbarContent>
 

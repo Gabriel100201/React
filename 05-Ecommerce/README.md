@@ -6,7 +6,10 @@
 - Hacer responsive ✅
 - Arreglar interfaz de header ✅
 - Arreglar interfaz de ProductCardView ✅
+- Crear interfaz para login ✅
+- Implementar carga y manejo de errores en la interfaz ✅
 
-- Implementar carga y manejo de errores en la interfaz
-- Crear login previo antes de añadir un producto al carrito (protected view)
-- Crear vista de login
+- Protejer la ruta de "all" y el uso del carrito sin previo login
+- Actualizar intergaz al logguearse
+- Añadir aviso de loggin como notificacion
+

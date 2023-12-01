@@ -17,7 +17,7 @@ export const Latest = () => {
           </span>
         </Link>
       </div>
-      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(190px,_1fr))] items-center justify-center gap-10">
+      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] sm:grid-cols-[repeat(auto-fit,_minmax(190px,_1fr))] items-center justify-center gap-5 sm:gap-10">
         {products &&
           products.map((element, index) => {
             if (index <= 10) {

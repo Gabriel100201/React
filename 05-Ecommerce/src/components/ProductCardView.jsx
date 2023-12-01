@@ -1,17 +1,22 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { CiShoppingCart } from "react-icons/ci";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/cart";
 import { phoneNumber } from "../constants/infoBuy";
+import { LoginContext } from "../context/login";
 
 export const ProductCardView = () => {
-
+  const navigate = useNavigate()
   let { state } = useLocation();
   const { addToCart } = useContext(CartContext);
   const [countToAdd, setCountToAdd] = useState(1);
+  const { isLogged } = useContext(LoginContext);
 
   const handleCartClick = () => {
+    if (!isLogged) {
+      navigate("/login")
+    }
     addToCart(state, countToAdd);
   };
 
@@ -65,7 +70,7 @@ export const ProductCardView = () => {
           </div>
           <p className="lg:text-lg text-md text-primary-900">{state.description}</p>
         </div>
-        <div className="mt-5 flex w-full items-center justify-between">
+        <div className="mt-5 flex w-full items-end justify-between">
           <div className="flex flex-col items-center justify-center">
             <label htmlFor="" className="text-gray-600">
               Cantidad

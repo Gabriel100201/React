@@ -11,9 +11,6 @@ export const LoginProvider = ({ children }) => {
     const setUnLogged = () => {
         setIsLoged(false)
     }
-    useEffect(() => {
-        console.log(isLogged)
-    }, [isLogged])
     return (
         <LoginContext.Provider value={{ isLogged, setLogged, setUnLogged }}>
             {children}
