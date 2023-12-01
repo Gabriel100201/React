@@ -51,7 +51,7 @@ export const AllProducts = () => {
   };
 
   return (
-    <div className={`flex w-full flex-col gap-10 ${backgroundColor} px-10 sm:px-7 md:px-20 lg:px-40 py-20`}>
+    <div className={`flex w-full flex-col gap-10 ${backgroundColor} px-10 sm:px-7 md:px-20 lg:px-36 py-20`}>
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
         {filteredProducts &&
           filteredProducts.map((element, index) => {

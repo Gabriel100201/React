@@ -5,16 +5,26 @@
 * {
     transition: background-color .2s;
 }
-body{
+
+body {
     background-color: #66aaf9;
 }
-.d-padding{
+
+.d-padding {
     padding-right: 2rem;
     padding-left: 2rem;
 }
+
+@media (min-width: 900px) {
+    .d-padding {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+
 @media (min-width: 1300px) {
-    .d-padding{
-        padding-left: 20rem;
-        padding-right: 20rem;
+    .d-padding {
+        padding-left: 15rem;
+        padding-right: 15rem;
     }
 }
