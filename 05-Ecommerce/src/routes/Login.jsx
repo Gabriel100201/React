@@ -1,21 +1,19 @@
 import { useEffect, useRef, useState } from "react"
 import { animeLogin } from "../animations/login";
+import { useAuth } from "../hooks/useAuth";
 
 export const Login = () => {
-
+  const { isLogged, tryAuth, loginError } = useAuth();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const [register, isRegister] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const emailValue = emailRef.current.value;
     const passwordValue = passwordRef.current.value;
 
-    console.log("Email:", emailValue);
-    console.log("Password:", passwordValue);
-
+    tryAuth({ mail: emailValue, password: passwordValue })
     emailRef.current.value = "";
     passwordRef.current.value = "";
   };

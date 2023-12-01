@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LoginContext } from '../context/login';
 
 export const ProtectedView = ({ children }) => {
+  const { isLogged } = useContext(LoginContext)
   const navigate = useNavigate();
-  const isAuth = false;
 
   useEffect(() => {
-    if (!isAuth) {
+    if (!isLogged) {
       navigate("/login");
     }
   }, []);
