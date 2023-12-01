@@ -8,8 +8,9 @@
 - Arreglar interfaz de ProductCardView ✅
 - Crear interfaz para login ✅
 - Implementar carga y manejo de errores en la interfaz ✅
+- Protejer la ruta de "all" y el uso del carrito sin previo login ✅
+- Actualizar interfaz al logguearse ✅
+- Añadir aviso de loggin como notificacion ✅
 
-- Protejer la ruta de "all" y el uso del carrito sin previo login
-- Actualizar intergaz al logguearse
-- Añadir aviso de loggin como notificacion
-
+- Arreglar interfaz de productos para mobile
+- Realizar carga de informacion aun cuando state sea null
