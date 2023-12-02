@@ -45,7 +45,7 @@ export const NavbarMobile = () => {
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden sm:flex" >
-        <nav className="flex items-center myTheme justify-center gap-3]">
+        <nav className="flex items-center myTheme justify-center gap-3">
           <CartButton text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </CartButton>

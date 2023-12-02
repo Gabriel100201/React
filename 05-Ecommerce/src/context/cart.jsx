@@ -8,24 +8,21 @@ export const CartProvider = ({ children }) => {
   const [count, setCount] = useState(0);
 
   const addToCart = (newItem, cant) => {
-    //find devuelve true si encuentra el elemento dentro del array
-    if (cart.find((item) => item.name === newItem.name)) {
-      newItem.count += cant;
-      toast.success("Producto agregado con éxito")
-      return;
+
+    const existingItemIndex = cart.findIndex((item) => item.name === newItem.name);
+
+    if (existingItemIndex !== -1) {
+      setCart(prevCart => prevCart.map((item, index) => (
+        index === existingItemIndex
+          ? { ...item, count: item.count + cant }
+          : item
+      )));
+    } else {
+      newItem.count = cant;
+      setCart([...cart, newItem]);
+      toast.success("Producto agregado con éxito");
+      setCount(count + 1);
     }
-    newItem.count = cant;
-    //ASI
-    /* const newCart = cart ? [...cart] : []
-    newCart.push(newItem);
-    console.log(newCart);
-    setCart(newCart) */
-    // O ASI
-    /* Se crea una copia del array para que la referencia se modifique
-    Si no los cambios no se veran reflejados en la interfaz */
-    setCart([...cart, newItem]);
-    setCount(count + 1);
-    toast.success("Producto agregado con éxito")
   };
 
   const removeToCart = (id) => {
