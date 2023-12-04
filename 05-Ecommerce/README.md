@@ -13,5 +13,5 @@
 - Añadir aviso de loggin como notificacion ✅
 - Arreglar interfaz de productos para mobile ✅
 - Implementar locasStorage ✅
-
-- Realizar carga de informacion aun cuando state sea null
+- Realizar carga de informacion aun cuando state sea null ✅
+- Agregar nuevos productos ✅

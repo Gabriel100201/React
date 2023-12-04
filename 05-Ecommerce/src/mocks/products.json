@@ -1,90 +1,146 @@
 [
-    {
-        "Nombre": "Tango España 1982",
-        "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
-        "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
-        "Precio": 1500,
-        "Off": 20,
-        "Category": "mundiales"
-    },
-    {
-        "Nombre": "Brazuca",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
-        "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
-        "Precio": 1800,
-        "Off": 20,
-        "Category": "mundiales"
-    },
-    {
-        "Nombre": "Telstar 18",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2018 en Rusia. Presenta un diseño inspirado en el icónico Telstar de 1970.",
-        "Url": "https://www.digitalsport.com.ar/files/products/5a677e6eba64c-456347-500x500.jpg",
-        "Precio": 1700,
-        "Off": 50,
-        "Category": "mundiales"
-    },
-    {
-        "Nombre": "Mitre Delta 1000",
-        "Descripcion": "Balón utilizado en la liga inglesa durante la década de 1990. Reconocido por su calidad y durabilidad.",
-        "Url": "https://i.ebayimg.com/images/g/OwsAAOSwjD9j-X2v/s-l1200.webp",
-        "Precio": 1200,
-        "Off": 50,
-        "Category": "argentina"
-    },
-    {
-        "Nombre": "Tango España 1982 2",
-        "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
-        "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
-        "Precio": 1500,
-        "Off": 50,
-        "Category": "argentina"
-    },
-    {
-        "Nombre": "Brazuca 2",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
-        "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
-        "Precio": 1800,
-        "Off": 50,
-        "Category": "laLiga"
-    },
-    {
-        "Nombre": "Telstar 18 2",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2018 en Rusia. Presenta un diseño inspirado en el icónico Telstar de 1970.",
-        "Url": "https://www.digitalsport.com.ar/files/products/5a677e6eba64c-456347-500x500.jpg",
-        "Precio": 1700,
-        "Off": 50,
-        "Category": "laLiga"
-    },
-    {
-        "Nombre": "Mitre Delta 1000 2",
-        "Descripcion": "Balón utilizado en la liga inglesa durante la década de 1990. Reconocido por su calidad y durabilidad.",
-        "Url": "https://i.ebayimg.com/images/g/OwsAAOSwjD9j-X2v/s-l1200.webp",
-        "Precio": 1200,
-        "Off": 50,
-        "Category": "laLiga"
-    },
-    {
-        "Nombre": "Tango España 1982 3",
-        "Descripcion": "Balón de fútbol utilizado en la Copa del Mundo de 1982 en España. Diseñado con paneles triangulares icónicos.",
-        "Url": "https://classicfootballshop.com/image/cache/catalog/balls/world-cup-balls/spain82-500x500.png",
-        "Precio": 1500,
-        "Off": 50,
-        "Category": "premier"
-    },
-    {
-        "Nombre": "Brazuca 3",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
-        "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
-        "Precio": 1800,
-        "Off": 50,
-        "Category": "bundesliga"
-    },
-    {
-        "Nombre": "Brazuca 3 3",
-        "Descripcion": "Balón oficial de la Copa del Mundo de la FIFA 2014 en Brasil. Destacado por su diseño colorido y moderno.",
-        "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
-        "Precio": 1800,
-        "Off": null,
-        "Category": "bundesliga"
-    }
+  {
+    "Nombre": "Adidas Telstar 18",
+    "Descripcion": "El balón oficial de la Copa del Mundo 2018",
+    "Url": "https://www.digitalsport.com.ar/files/products/5a301fad4bab9-433166-500x500.jpg",
+    "Precio": 3500,
+    "Off": 10,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Nike Ordem V",
+    "Descripcion": "Balón de alta calidad para competiciones profesionales",
+    "Url": "https://www.digitalsport.com.ar/files/products/59c47554b3398-422940-1200x1200.jpg",
+    "Precio": 5000,
+    "Off": 20,
+    "Category": "premier"
+  },
+  {
+    "Nombre": "Puma Future Flare",
+    "Descripcion": "Balón con diseño llamativo y tecnología avanzada",
+    "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5w51zqoN0os-tqPDVKYxU6LZNwXwa3r-rIyQMvoBCokCr9M3JaJLS1WHN_-bhFPE1V_8&usqp=CAU",
+    "Precio": 2800,
+    "Off": 15,
+    "Category": "bundesliga"
+  },
+  {
+    "Nombre": "Adidas Tango España",
+    "Descripcion": "Balón oficial de la Liga Española",
+    "Url": "https://assets.adidas.com/images/w_600,f_auto,q_auto/0c45aecb0cc24655b10ea7f500d1b553_9366/Balon_Tango_Rosario_Blanco_656927_01_standard.jpg",
+    "Precio": 3200,
+    "Off": 5,
+    "Category": "laLiga"
+  },
+  {
+    "Nombre": "Nike Merlin",
+    "Descripcion": "Balón de alto rendimiento con tecnología de precisión",
+    "Url": "https://acdn.mitiendanube.com/stores/001/220/451/products/662644-mla44354788684_122020-f-a3ede1647fc139061d16082523291855-640-0.jpg",
+    "Precio": 4500,
+    "Off": 0,
+    "Category": "premier"
+  },
+  {
+    "Nombre": "Puma One Chrome",
+    "Descripcion": "Balón de edición limitada con acabado cromado",
+    "Url": "https://m.media-amazon.com/images/I/61-PA3iYeoL._AC_UF1000,1000_QL80_.jpg",
+    "Precio": 3900,
+    "Off": 25,
+    "Category": "serieA"
+  },
+  {
+    "Nombre": "Adidas Brazuca",
+    "Descripcion": "Balón oficial de la Copa del Mundo 2014",
+    "Url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
+    "Precio": 3000,
+    "Off": 10,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Nike Ordem IV",
+    "Descripcion": "Balón de alta calidad para competiciones profesionales",
+    "Url": "https://p.turbosquid.com/ts-thumb/TP/zuXMep/y1F3ZctZ/signatureimage/jpg/1470683959/600x600/fit_q87/4fdcdf6d37455cfbffceca8511e01cb4137539de/signatureimage.jpg",
+    "Precio": 4800,
+    "Off": 30,
+    "Category": "premier"
+  },
+  {
+    "Nombre": "Puma Future Shock",
+    "Descripcion": "Balón con tecnología de absorción de impactos",
+    "Url": "https://www.tradeinn.com/f/13693/136930635/puma-balon-futbol-future-pulse.jpg",
+    "Precio": 3400,
+    "Off": 20,
+    "Category": "bundesliga"
+  },
+  {
+    "Nombre": "Adidas Tango Argentina",
+    "Descripcion": "Balón oficial de la Selección Argentina",
+    "Url": "https://www.lavoz.com.ar/resizer/HNBUVAFtK8i6inJ4s_r_41r040U=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/4C6DOOYZOFDD5IYNWXPC7EAQUE.jpg",
+    "Precio": 3800,
+    "Off": 15,
+    "Category": "argentina"
+  },
+  {
+    "Nombre": "Jabulani",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 2010",
+    "Url": "https://s.rfi.fr/media/display/797a3f40-12b1-11ea-ad06-005056a99247/w:1280/p:1x1/ballon-adidas-jabulani-2.jpg",
+    "Precio": 4500,
+    "Off": 10,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Teamgeist",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 2006",
+    "Url": "https://ifinfralivestorage.blob.core.windows.net/ifservice/7265/28729/00000000-0000-0000-0000-000000000000/01_adidas_Teamgeist_1_low.jpg",
+    "Precio": 3000,
+    "Off": 25,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "+Teamgeist Berlin",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 2006, versión final",
+    "Url": "https://www.balones-oficiales.com/wp-content/uploads/2018/06/teamgeist.png",
+    "Precio": 5500,
+    "Off": 5,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Fevernova",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 2002",
+    "Url": "https://media.gettyimages.com/id/989853260/es/foto/the-undated-handout-shows-the-official-ball-fevernova-used-at-the-fifa-world-cup-2002-in-japan.jpg?s=1024x1024&w=gi&k=20&c=9e02SWV-Qn7k0o0JcGbvDuAtmbmCdcxwVVI5xajjQeE=",
+    "Precio": 2500,
+    "Off": 30,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Tricolore",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 1998",
+    "Url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/1998_-_Tricolore_%28France%29_%284170715889%29.jpg/800px-1998_-_Tricolore_%28France%29_%284170715889%29.jpg",
+    "Precio": 4000,
+    "Off": 20,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Questra",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 1994",
+    "Url": "https://www.balones-oficiales.com/wp-content/uploads/2018/09/questra.png",
+    "Precio": 5500,
+    "Off": 10,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Etrusco Unico",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 1990",
+    "Url": "https://media.gettyimages.com/id/989853230/es/foto/the-undated-handout-shows-the-official-soccer-ball-etrusco-unico-of-the-fifa-world-cup-1990-in.jpg?s=1024x1024&w=gi&k=20&c=eX2rC13jvSSv9RPIP_YNXwunnnlSHrGa6KnB2rYTwM8=",
+    "Precio": 3000,
+    "Off": 15,
+    "Category": "mundiales"
+  },
+  {
+    "Nombre": "Azteca",
+    "Descripcion": "El balón oficial de la Copa Mundial de la FIFA 1986",
+    "Url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Adidas_Azteca_1986.jpg",
+    "Precio": 3500,
+    "Off": 10,
+    "Category": "mundiales"
+  }
 ]

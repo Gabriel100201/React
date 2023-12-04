@@ -8,18 +8,18 @@ export const ProductCard = ({ off, name, description, price, imageUrl }) => {
       to={"/products/" + name}
       state={{ name, description, off, price, imageUrl }}
     >
-      <Card className=" w-full">
+      <Card className="w-full h-full">
         <Image
           removeWrapper
           alt={`Imagen de ${name}`}
-          className="z-0 max-h-56 w-full scale-105 object-cover"
+          className="z-0 max-h-56 scale-105 object-cover w-full h-56"
           src={imageUrl}
         />
         <CardFooter className="z-10 bg-primary-200">
           <div>
             <div className="flex items-center justify-start gap-3">
               <p className="text-md sm:text-lg font-bold text-black">$ {price}</p>
-              {off && (
+              {off > 0 && (
                 <>
                   <p className="text-sm hidden sm:flex sm:text-md text-gray-500 line-through">
                     $ {prevPrice}

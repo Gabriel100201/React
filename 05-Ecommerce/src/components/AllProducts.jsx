@@ -41,7 +41,7 @@ export const AllProducts = () => {
         (filters.laLiga && product.Category === "laLiga");
 
       return (
-        product.Off > filters.Off &&
+        product.Off >= filters.Off &&
         product.Precio <= filters.maxPrice &&
         product.Precio >= filters.minPrice &&
         categoryFilter
