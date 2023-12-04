@@ -15,3 +15,5 @@
 - Implementar locasStorage ✅
 - Realizar carga de informacion aun cuando state sea null ✅
 - Agregar nuevos productos ✅
+
+- Mejorar interfaz de ProductCardView
