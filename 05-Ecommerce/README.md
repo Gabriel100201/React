@@ -14,3 +14,4 @@
 
 - Arreglar interfaz de productos para mobile
 - Realizar carga de informacion aun cuando state sea null
+- Implementar locasStorage
