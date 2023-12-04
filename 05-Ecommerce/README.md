@@ -11,7 +11,7 @@
 - Protejer la ruta de "all" y el uso del carrito sin previo login ✅
 - Actualizar interfaz al logguearse ✅
 - Añadir aviso de loggin como notificacion ✅
+- Arreglar interfaz de productos para mobile ✅
+- Implementar locasStorage ✅
 
-- Arreglar interfaz de productos para mobile
 - Realizar carga de informacion aun cuando state sea null
-- Implementar locasStorage
