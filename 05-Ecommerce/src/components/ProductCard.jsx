@@ -12,7 +12,7 @@ export const ProductCard = ({ off, name, description, price, imageUrl }) => {
         <Image
           removeWrapper
           alt={`Imagen de ${name}`}
-          className="z-0 max-h-56 scale-105 object-cover w-full h-56"
+          className="z-0 max-h-56 scale-105 object-cover w-full h-48"
           src={imageUrl}
         />
         <CardFooter className="z-10 bg-primary-200">

@@ -20,9 +20,18 @@ export const NavbarMobile = () => {
   }
 
   const menuItems = [
-    "Perfil",
-    "Notificaciones",
-    "Carrito"
+    {
+      "text": "Perfil",
+      "link": "login"
+    },
+    {
+      "text": "Todos",
+      "link": "all"
+    },
+    {
+      "text": "Carrito",
+      "link": "cart"
+    }
   ];
 
   return (
@@ -66,11 +75,11 @@ export const NavbarMobile = () => {
         </RoundedButton>
       </NavbarContent>
 
-      <NavbarMenu className="p-5">
+      <NavbarMenu className="p-5 z-50">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              to={item}
+            <Link onClick={setMenuDefault}
+              to={item.link}
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
@@ -78,7 +87,7 @@ export const NavbarMobile = () => {
               href="#"
               size="lg"
             >
-              {item}
+              {item.text}
             </Link>
           </NavbarMenuItem>
         ))}

@@ -6,14 +6,17 @@ import { ProductView } from "./routes/ProductView";
 import { CartProvider } from "./context/cart";
 import { FiltersProvider } from "./context/filters.jsx";
 import { NavbarMobile } from "./components/NavbarMobile.jsx";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Footer } from "./components/Footer.jsx"
 import { Login } from "./routes/Login.jsx";
 import { ProtectedView } from "./components/ProtectedView.jsx";
-import { LoginProvider } from "./context/login.jsx";
+import { LoginContext } from "./context/login.jsx";
 import { Toaster } from "sonner";
+import { Profile } from "./routes/Profile.jsx";
 
 export const App = () => {
+  const { isLogged } = useContext(LoginContext);
+
   //Función que se ejecuta cada vez que se cambia el path
   // Sirve para reiniciar el scroll
   const ScrollToTop = () => {
@@ -27,7 +30,6 @@ export const App = () => {
   return (
     <CartProvider>
       <FiltersProvider>
-        <LoginProvider>
           <NextUIProvider>
             <Toaster richColors />
             <ScrollToTop></ScrollToTop>
@@ -40,11 +42,17 @@ export const App = () => {
                 </ProtectedView>
               }></Route>
               <Route path="products/:infoProduct" element={<ProductView />}></Route>
-              <Route path="login" element={<Login />}></Route>
+              {
+                isLogged &&
+                <Route path="login" element={<Profile />}></Route>
+              }
+              {
+                !isLogged &&
+                <Route path="login" element={<Login />}></Route>
+              }
             </Routes>
             <Footer></Footer>
           </NextUIProvider>
-        </LoginProvider>
       </FiltersProvider>
     </CartProvider>
   );
