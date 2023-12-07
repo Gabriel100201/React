@@ -15,7 +15,7 @@ export const FiltersProvider = ({ children }) => {
     serieA: true,
     laLiga: true,
     Off: 0,
-    word: ""
+    word: "",
   });
 
   const updateFilters = (target, value) => {

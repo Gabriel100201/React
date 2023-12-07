@@ -11,9 +11,9 @@ export const Filters = () => {
 
   useEffect(() => {
     if (initialOffersState == true) {
-      updateFilters("offers", true)
+      updateFilters("offers", true);
     }
-  }, [])
+  }, []);
 
   const handleCheckBox = (ev) => {
     const filterToUpdate = ev.target.value;
@@ -22,27 +22,33 @@ export const Filters = () => {
   };
   const handlePrice = (ev) => {
     const newPrice = ev.target.value;
-    updateFilters("maxPrice", newPrice)
-  }
+    updateFilters("maxPrice", newPrice);
+  };
   const handleWord = () => {
-    updateFilters("word", "")
-  }
+    updateFilters("word", "");
+  };
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center sm:flex-col gap-5">
-        {
-          filters.word != "" &&
-          <div className="bg-gray-300 flex justify-between h-7 items-center w-32 rounded-xl px-5">
+      <div className="flex flex-row items-center justify-center gap-5 sm:flex-col">
+        {filters.word != "" && (
+          <div className="flex h-7 w-32 items-center justify-between rounded-xl bg-gray-300 px-5">
             <span className="text-center text-gray-600">{filters.word}</span>
             <button onClick={handleWord} className="opacity-75">
               <FaDeleteLeft />
             </button>
           </div>
-        }
+        )}
         <div className="flex flex-col items-center justify-center">
           <span className="text-md">Precio Máximo</span>
-          <input value={filters.maxPrice} onChange={handlePrice} type="range" min="0" max="10000" step="100" />
+          <input
+            value={filters.maxPrice}
+            onChange={handlePrice}
+            type="range"
+            min="0"
+            max="10000"
+            step="100"
+          />
           <label htmlFor="price" className="text-md">
             ${filters.maxPrice}
           </label>
@@ -128,7 +134,7 @@ export const Filters = () => {
             className="checked:bg-green-600"
           />
         </div>
-        <div className="mt-1 flex w-full gap-3 items-center justify-between">
+        <div className="mt-1 flex w-full items-center justify-between gap-3">
           <label className="font-semibold" htmlFor="La Liga">
             Envio Gratis
           </label>

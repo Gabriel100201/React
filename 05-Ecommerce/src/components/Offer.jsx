@@ -6,18 +6,18 @@ export const Offer = () => {
   const { products, loading, error, getProducts } = useProducts();
 
   return (
-    <div className="flex flex-col gap-10 bg-primary-100 d-padding py-10">
+    <div className="d-padding flex flex-col gap-10 bg-primary-100 py-10">
       <div className="flex items-center justify-between">
         <span className="text-xl font-semibold text-primary-900">
           Las mejores ofertas de este mes
         </span>
         <Link to={"all"}>
-          <span className="text-lg font-semibold text-primary-700 hidden sm:flex">
+          <span className="hidden text-lg font-semibold text-primary-700 sm:flex">
             Ver más ➜
           </span>
         </Link>
       </div>
-      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] items-center justify-center gap-5 sm:gap-10">
+      <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] items-center justify-center gap-5 sm:gap-10 md:grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))]">
         {products &&
           products.map((element, index) => {
             if (index <= 4) {

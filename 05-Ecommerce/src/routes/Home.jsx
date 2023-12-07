@@ -5,9 +5,9 @@ import { Latest } from "../components/Latest";
 export const Home = () => {
   return (
     <div className="w-full bg-primary-100 myTheme">
-        <Banner></Banner>
-        <Offer></Offer>
-        <Latest></Latest>
+      <Banner></Banner>
+      <Offer></Offer>
+      <Latest></Latest>
     </div>
   );
 };

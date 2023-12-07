@@ -1,10 +1,17 @@
 import { useState } from "react";
-import Logo from "../assets/Logo.svg"
+import Logo from "../assets/Logo.svg";
 import { HiBellAlert } from "react-icons/hi2";
 import { CiShoppingCart } from "react-icons/ci";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { Navbar, NavbarBrand, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+} from "@nextui-org/react";
 import { SearchInput } from "./SearchInput";
 import { RoundedButton } from "./RoundedButton";
 import { UserButton } from "./UserButton";
@@ -12,31 +19,33 @@ import { NotifyButton } from "./NotifyButton";
 import { CartButton } from "./CartButton";
 
 export const NavbarMobile = () => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const setMenuDefault = () => {
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   const menuItems = [
     {
-      "text": "Perfil",
-      "link": "login"
+      text: "Perfil",
+      link: "login",
     },
     {
-      "text": "Todos",
-      "link": "all"
+      text: "Todos",
+      link: "all",
     },
     {
-      "text": "Carrito",
-      "link": "cart"
-    }
+      text: "Carrito",
+      link: "cart",
+    },
   ];
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} className="shadow-lg" onMenuOpenChange={setIsMenuOpen}>
-
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      className="shadow-lg"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -53,8 +62,8 @@ export const NavbarMobile = () => {
         <SearchInput></SearchInput>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden sm:flex" >
-        <nav className="flex items-center myTheme justify-center gap-3">
+      <NavbarContent justify="end" className="hidden sm:flex">
+        <nav className="flex items-center justify-center gap-3 myTheme">
           <CartButton text="Cart">
             <CiShoppingCart className="mr-[1px] text-2xl text-sky-800" />
           </CartButton>
@@ -75,13 +84,18 @@ export const NavbarMobile = () => {
         </RoundedButton>
       </NavbarContent>
 
-      <NavbarMenu className="p-5 z-50">
+      <NavbarMenu className="z-50 p-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link onClick={setMenuDefault}
+            <Link
+              onClick={setMenuDefault}
               to={item.link}
               color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                    ? "danger"
+                    : "foreground"
               }
               className="w-full"
               href="#"
@@ -92,11 +106,11 @@ export const NavbarMobile = () => {
           </NavbarMenuItem>
         ))}
         <Link onClick={setMenuDefault} to={"/"}>
-          <div className="w-full mt-48 h-full px-24">
+          <div className="mt-48 h-full w-full px-24">
             <img src={Logo} alt="" />
           </div>
         </Link>
       </NavbarMenu>
     </Navbar>
-  )
-}
+  );
+};

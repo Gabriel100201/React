@@ -3,7 +3,7 @@ import { useProducts } from "../hooks/useProducts.js";
 import { useContext, useEffect, useState } from "react";
 import { FiltersContext } from "../context/filters.jsx";
 import { useSearch } from "../hooks/useSearch";
-import noResults from "../assets/noProducts.png"
+import noResults from "../assets/noProducts.png";
 
 export const AllProducts = () => {
   const { filters } = useContext(FiltersContext);
@@ -17,16 +17,18 @@ export const AllProducts = () => {
   }, [filters]);
 
   useEffect(() => {
-    setFilteredProducts(searchResults)
-  }, [searchResults])
+    setFilteredProducts(searchResults);
+  }, [searchResults]);
 
   useEffect(() => {
     applyFilter();
   }, [filters, products]);
 
   useEffect(() => {
-    setBackgroundColor(filteredProducts.length === 0 ? "bg-yellow-100" : "bg-primary-100");
-  }, [filteredProducts])
+    setBackgroundColor(
+      filteredProducts.length === 0 ? "bg-yellow-100" : "bg-primary-100",
+    );
+  }, [filteredProducts]);
 
   const applyFilter = () => {
     const filtered = searchResults.filter((product) => {
@@ -51,7 +53,9 @@ export const AllProducts = () => {
   };
 
   return (
-    <div className={`flex w-full flex-col gap-10 ${backgroundColor} px-10 sm:px-7 md:px-20 lg:px-36 py-20`}>
+    <div
+      className={`flex w-full flex-col gap-10 ${backgroundColor} px-10 py-20 sm:px-7 md:px-20 lg:px-36`}
+    >
       <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] items-center justify-center gap-10">
         {filteredProducts &&
           filteredProducts.map((element, index) => {
@@ -68,15 +72,20 @@ export const AllProducts = () => {
               );
             }
           })}
-        {
-          filteredProducts.length == 0 &&
-          <div className="w-full flex justify-center items-center flex-col">
-            <img src={noResults} alt="no product image" className="w-full max-w-[300px]" />
-            <div className="flex justify-center items-center py-1 px-3 bg-yellow-300/80 rounded-full">
-              <span className="text-center text-md font-bold text-gray-600">No se encontraron productos</span>
+        {filteredProducts.length == 0 && (
+          <div className="flex w-full flex-col items-center justify-center">
+            <img
+              src={noResults}
+              alt="no product image"
+              className="w-full max-w-[300px]"
+            />
+            <div className="flex items-center justify-center rounded-full bg-yellow-300/80 px-3 py-1">
+              <span className="text-md text-center font-bold text-gray-600">
+                No se encontraron productos
+              </span>
             </div>
           </div>
-        }
+        )}
       </div>
     </div>
   );

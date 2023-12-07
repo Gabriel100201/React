@@ -7,7 +7,7 @@ import { CartProvider } from "./context/cart";
 import { FiltersProvider } from "./context/filters.jsx";
 import { NavbarMobile } from "./components/NavbarMobile.jsx";
 import { useContext, useEffect } from "react";
-import { Footer } from "./components/Footer.jsx"
+import { Footer } from "./components/Footer.jsx";
 import { Login } from "./routes/Login.jsx";
 import { ProtectedView } from "./components/ProtectedView.jsx";
 import { LoginContext } from "./context/login.jsx";
@@ -30,29 +30,29 @@ export const App = () => {
   return (
     <CartProvider>
       <FiltersProvider>
-          <NextUIProvider>
-            <Toaster richColors />
-            <ScrollToTop></ScrollToTop>
-            <NavbarMobile></NavbarMobile>
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="all" element={
+        <NextUIProvider>
+          <Toaster richColors />
+          <ScrollToTop></ScrollToTop>
+          <NavbarMobile></NavbarMobile>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route
+              path="all"
+              element={
                 <ProtectedView>
                   <All />
                 </ProtectedView>
-              }></Route>
-              <Route path="products/:infoProduct" element={<ProductView />}></Route>
-              {
-                isLogged &&
-                <Route path="login" element={<Profile />}></Route>
               }
-              {
-                !isLogged &&
-                <Route path="login" element={<Login />}></Route>
-              }
-            </Routes>
-            <Footer></Footer>
-          </NextUIProvider>
+            ></Route>
+            <Route
+              path="products/:infoProduct"
+              element={<ProductView />}
+            ></Route>
+            {isLogged && <Route path="login" element={<Profile />}></Route>}
+            {!isLogged && <Route path="login" element={<Login />}></Route>}
+          </Routes>
+          <Footer></Footer>
+        </NextUIProvider>
       </FiltersProvider>
     </CartProvider>
   );

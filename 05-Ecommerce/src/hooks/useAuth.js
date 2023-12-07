@@ -13,7 +13,7 @@ export const useAuth = () => {
         const user = users.users.find((user) => user.mail === mail);
         if (user && user.password === password) {
             setLoginError(null)
-            setLogged({mail, password});
+            setLogged({ mail, password });
             navigate("/")
             toast.success("Sesión iniciada con exito")
         } else {
@@ -22,7 +22,7 @@ export const useAuth = () => {
             toast.warning(error)
         }
     }
-    
+
     return {
         isLogged,
         tryAuth,

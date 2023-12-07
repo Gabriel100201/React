@@ -6,24 +6,27 @@ import { useNavigate } from "react-router-dom";
 export const SearchInput = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
-  const { updateFilters } = useContext(FiltersContext)
+  const { updateFilters } = useContext(FiltersContext);
 
   const handleSubmit = (ev) => {
-    ev.preventDefault()
-    updateFilters("word", inputValue)
-    if (window.location.pathname == "/all") return
+    ev.preventDefault();
+    updateFilters("word", inputValue);
+    if (window.location.pathname == "/all") return;
     navigate("/all");
-  }
+  };
 
   const handleChange = (ev) => {
     const word = ev.target.value;
-    setInputValue(word)
-  }
+    setInputValue(word);
+  };
 
   return (
     <div>
       <div className="flex h-9 place-content-center opacity-90 hover:opacity-100">
-        <form className="flex justify-center items-center" onSubmit={handleSubmit}>
+        <form
+          className="flex items-center justify-center"
+          onSubmit={handleSubmit}
+        >
           <input
             value={inputValue}
             onChange={handleChange}
@@ -41,6 +44,5 @@ export const SearchInput = () => {
         </form>
       </div>
     </div>
-  )
-
-}
+  );
+};
