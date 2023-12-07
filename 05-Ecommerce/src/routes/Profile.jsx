@@ -14,8 +14,8 @@ export const Profile = () => {
     };
 
     return (
-        <section className="flex px-7 py-12">
-            <div className="w-full bg-primary-100 py-12 px-5 rounded-3xl flex flex-col gap-3 justify-center items-center">
+        <section className="flex px-7 justify-center min-h-[60vh] py-32">
+            <div className="w-full bg-primary-100 max-w-[700px] py-12 px-5 rounded-3xl flex flex-col gap-3 justify-center items-center">
                 <h1 className="font-semibold text-primary-900 text-2xl">Sesión activa</h1>
                 <span>Mail: {infoLoged.mail}</span>
                 <div className="flex gap-5">
