@@ -21,7 +21,7 @@ export const useSearchProduct = () => {
             off: foundProduct?.Off || 0,
             category: foundProduct?.Category || '',
         };
-
+        
         setProductInfo(renamedProductInfo || {});
     }, [state])
 

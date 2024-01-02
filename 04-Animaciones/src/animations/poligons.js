@@ -1,40 +1,37 @@
 import anime from 'animejs/lib/anime.es.js';
-var path = anime.path('.polygon path');
+import { curves } from "../constants/bg-curves"
 
 export const animatePolygon = () => {
-    anime({
-        targets: '.polygon',
-        points: [
-
-            {
-                value: '100,10 40,198 190,78 10,78 160,198'
+    const elements = document.querySelectorAll('.lineBg');
+    const numberOfCurves = 7; // Número total de curvas disponibles
+    elements.forEach((element, index) => {
+        setTimeout(() => {
+            console.log("El")
+            let randomIndex = Math.floor(Math.random() * numberOfCurves);
+            // Ajusta el número aleatorio si es igual al índice
+            while (randomIndex === index) {
+                randomIndex = Math.floor(Math.random() * numberOfCurves);
             }
-        ],
-        easing: 'easeOutQuad',
-        duration: 1000,
-        loop: false
+            anime({
+                targets: element,
+                d: [
+                    { value: curves[randomIndex], duration: 9000, easing: 'easeInOutSine' },
+                ],
+                loop: true,
+                direction: 'alternate',
+            });
+        }, 500 * index)
     });
-}
+};
 
 
-export const animateAlternatyve = () => {
-    anime({
-        targets: '.polygon',
-        translateX: path('x'),
-        translateY: path('y'),
-        rotate: path('angle'),
-        easing: 'linear',
-        duration: 2000,
-        loop: true
-    });
-}
 
 export const animateFull = () => {
     anime({
-        targets: '.polygon',
-        strokeDashoffset: [anime.setDashoffset, 2],
+        targets: '.lineBg',
+        strokeDashoffset: [anime.setDashoffset, -200],
         easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function (el, i) { return i * 250 },
+        duration: 3000,
+        /* delay: function (el, i) { return i * 100 }, */
     });
 }
