@@ -24,14 +24,25 @@ export const animatePolygon = () => {
     });
 };
 
-
+export const animateColor = () => {
+    const svgElent = document.querySelector(".lineBg")
+    console.log(anime.setDashoffset(svgElent))
+    anime({
+        targets: '.lineBg',
+        strokeDashoffset: [anime.setDashoffset, -200],
+        easing: 'easeInSine',
+        direction: 'reverse',
+        duration: 2000,
+        delay: function (el, i) { return i * 100 },
+    })
+}
 
 export const animateFull = () => {
     anime({
         targets: '.lineBg',
         strokeDashoffset: [anime.setDashoffset, -200],
-        easing: 'easeInOutSine',
-        duration: 3000,
-        /* delay: function (el, i) { return i * 100 }, */
+        easing: 'easeInSine',
+        duration: 2000,
+        delay: function (el, i) { return i * 100 },
     });
 }

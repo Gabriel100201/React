@@ -3,8 +3,11 @@ import { Navbar } from "./components/Navbar";
 import {
   animatePolygon,
   animateFull,
+  animateColor,
 } from "./animations/poligons";
 import { BackGround } from "./components/Bg";
+import { Home } from "./templates/Home";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export const App = () => {
   useEffect(() => {
@@ -12,13 +15,19 @@ export const App = () => {
     setTimeout(() => {
       animatePolygon()
     }, [500])
+    /* setTimeout(() => {
+      animateColor()
+    }, [4000]) */
   }, [BackGround]);
   return (
     <>
-      <div className="z-30 h-32 w-full absolute px-32 py-32">
-        <h1 className="text-white font-mono font-semibold text-3xl">Gabriel Funes</h1>
-      </div>
-      <BackGround></BackGround>
+      <ParallaxProvider>
+        <div className="z-30 h-32 w-full absolute px-96">
+          <Navbar></Navbar>
+          <Home></Home>
+        </div>
+        <BackGround></BackGround>
+      </ParallaxProvider>
     </>
   );
 };
