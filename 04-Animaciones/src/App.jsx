@@ -25,6 +25,7 @@ export const App = () => {
         <div className="z-30 h-32 w-full absolute px-96">
           <Navbar></Navbar>
           <Home></Home>
+          <Home></Home>
         </div>
         <BackGround></BackGround>
       </ParallaxProvider>

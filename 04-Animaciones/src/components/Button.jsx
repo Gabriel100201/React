@@ -9,7 +9,7 @@ export const Button = ({ primary = true, secondary, children }) => {
   const componentStyles = secondary ? secondaryStyles : primaryStyles;
 
   return (
-    <div className={`w-40 hover:cursor-pointer ${componentStyles}`}>
+    <div className={`w-40 hover:cursor-pointer hover:scale-105 transition-all ${componentStyles}`}>
       {children}
     </div>
   );
