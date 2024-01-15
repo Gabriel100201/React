@@ -15,9 +15,11 @@ export const Experience = () => {
                 <time className="mb-1 text-sm font-semibold leading-none text-alternatyve-400 dark:text-gray-500">{item.date}</time>
                 <h3 className="text-lg font-semibold text-primary-50 dark:text-white">{item.title}</h3>
                 <p className="mb-4 text-base font-normal text-primary-200 dark:text-gray-400">{item.text}</p>
-                <a href={item.url} target='_blank'>
-                  <Button secondary size={"sm"}>Ver más</Button>
-                </a>
+                <Button secondary size={"sm"}>
+                  <a href={item.url} className='w-auto' target='_blank'>
+                    Ver más
+                  </a>
+                </Button>
               </li>
             )
           })

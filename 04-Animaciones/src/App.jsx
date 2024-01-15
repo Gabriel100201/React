@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import {
   animatePolygon,
@@ -12,6 +11,7 @@ import Avatar from './assets/Avatar.svg'
 import { ArrowDown } from './components/ArrowDown';
 import { Projects } from "./templates/Projects";
 import { Experience } from "./templates/Experience";
+import { ScrollProvider } from "./context/refs";
 
 export const App = () => {
   /* useEffect(() => {
@@ -24,17 +24,19 @@ export const App = () => {
   return (
     <>
       <ParallaxProvider>
-        <div className="z-30 h-32 w-full absolute px-12 sm:px-32 md:px-36 lg:px-32 xl:px-48 2xl:px-96">
-          <img src={Avatar} alt="Avatar" className='sm:hidden absolute w-9 top-5 right-5' />
-          <Navbar></Navbar>
-          <Home></Home>
-          <div className="w-full flex justify-center mt-10">
-            <ArrowDown></ArrowDown>
+        <ScrollProvider>
+          <div className="z-30 h-32 w-full absolute px-12 sm:px-32 md:px-36 lg:px-32 xl:px-48 2xl:px-96">
+            <img src={Avatar} alt="Avatar" className='sm:hidden absolute w-9 top-5 right-5' />
+            <Navbar></Navbar>
+            <Home></Home>
+            <div className="w-full flex justify-center mt-10">
+              <ArrowDown></ArrowDown>
+            </div>
+            <Experience></Experience>
+            <Projects></Projects>
           </div>
-          <Experience></Experience>
-          <Projects></Projects>
-        </div>
-        <BackGround></BackGround>
+          <BackGround></BackGround>
+        </ScrollProvider>
       </ParallaxProvider>
     </>
   );
