@@ -1,6 +1,8 @@
 import { useParallax } from 'react-scroll-parallax';
 import Avatar from '../assets/Avatar.svg'
 import { Button } from '../components/Button';
+import { IconButton } from '../components/IconButton';
+import { SOCIALS } from '../constants/socials';
 
 export const Home = () => {
   const firstparallax = useParallax({ speed: 10 });
@@ -12,7 +14,12 @@ export const Home = () => {
         <h2 className="text-alternatyve-500 font-semibold text-3xl mb-1">Desarrollador Front-End</h2>
         <h1 className="text-white font-semibold text-7xl mb-5">Gabriel Funes</h1>
         <h4 className="text-white font-semibold first-letter:text-alternatyve-500 first-letter:text-2xl">Hola, soy un apasionado del desarrollo de software Front-End con experiencia en tecnologías líderes como React y Vue. Mi pasión por mantenerme actualizado en las últimas tendencias del desarrollo Front-End me permite brindar soluciones innovadoras que impulsan la experiencia del usuario.</h4>
-        <Button>Descargar CV</Button>
+        <div className='flex gap-7 mt-7 items-center'>
+          <Button primary>Descargar CV</Button>
+          <Button secondary>Descargar CV</Button>
+          <IconButton socialMedia={SOCIALS.LI}></IconButton>
+          <IconButton socialMedia={SOCIALS.GH}></IconButton>
+        </div>
       </div>
       <div ref={secondParallax.ref} className="w-1/2 flex justify-end">
         <div className="bg-alternatyve-500/70 w-80 relative h-80 rounded-full backdrop-blur-sm">
@@ -26,6 +33,6 @@ export const Home = () => {
           />
         </div>
       </div>
-    </section>
+    </section >
   )
 }
