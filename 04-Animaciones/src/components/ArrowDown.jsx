@@ -2,9 +2,9 @@ import '../styles/scroll-arrow.css'
 import { useParallax } from 'react-scroll-parallax';
 
 export const ArrowDown = () => {
-  const parallax = useParallax({ speed: 40 });
+  const parallax = useParallax({ speed: 0 });
   return (
-    <div ref={parallax.ref} className="absolute bottom-32 left-1/2">
+    <div ref={parallax.ref} className="left-1/2">
       <div className="mouse">
         <div className="wheel"></div>
       </div>
