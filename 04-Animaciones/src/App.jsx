@@ -11,6 +11,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import Avatar from './assets/Avatar.svg'
 import { ArrowDown } from './components/ArrowDown';
 import { Projects } from "./templates/Projects";
+import { Experience } from "./templates/Experience";
 
 export const App = () => {
   /* useEffect(() => {
@@ -30,6 +31,7 @@ export const App = () => {
           <div className="w-full flex justify-center mt-10">
             <ArrowDown></ArrowDown>
           </div>
+          <Experience></Experience>
           <Projects></Projects>
         </div>
         <BackGround></BackGround>

@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({ primary = true, secondary, children }) => {
+export const Button = ({ primary = true, secondary, children, size }) => {
 
-  const primaryStyles = 'h-12 flex justify-center items-center text-white bg-alternatyve-600 hover:bg-alternatyve-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center';
-  const secondaryStyles = 'h-12 flex justify-center items-center text-white focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 text-center border-alternatyve-500 hover:border-alternatyve-300 border-2 bg-white/0 hover:bg-white/10';
-
+  const primaryStyles = 'bg-alternatyve-600 hover:bg-alternatyve-700 text-sm text-center';
+  const secondaryStyles = ' focus:ring-4 text-sm text-center border-alternatyve-500 hover:border-alternatyve-300 border-2 bg-white/0 hover:bg-white/10';
   const componentStyles = secondary ? secondaryStyles : primaryStyles;
 
+  const sizes = {
+    sm: 'w-28 h-10 px-3 py-2',
+    md: 'w-36 h-12 px-5 py-2.5',
+    lg: 'w-40 h-12'
+  }
+  const sizeStyles = sizes[size] || sizes.md
+
   return (
-    <div className={`w-32 sm:w-32 md:w-36 hover:cursor-pointer hover:scale-105 transition-all ${componentStyles}`}>
+    <div className={`flex justify-center font-medium  items-center rounded-full focus:outline-none text-white hover:cursor-pointer hover:scale-105 transition-all ${componentStyles} ${sizeStyles}`}>
       {children}
     </div>
   );
@@ -18,4 +24,5 @@ export const Button = ({ primary = true, secondary, children }) => {
 Button.propTypes = {
   primary: PropTypes.bool,
   children: PropTypes.node,
+  size: PropTypes.string
 };
