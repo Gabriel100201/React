@@ -14,7 +14,7 @@ export const ProjectCard = ({ title, text, img, url }) => {
       <div className="absolute inset-0 flex flex-col justify-between p-7 text-white opacity-100">
         <div className="flex flex-col justify-start">
           <h3 className="text-4xl font-semibold text-start mb-2">{title}</h3>
-          <p className="text-md text-start opacity-0 group-hover:opacity-100 transition-all">{text}</p>
+          <p className="text-md text-start opacity-100 xl:opacity-0 group-hover:opacity-100 overflow-hidden max-h-[9em] transition-all">{text}</p>
         </div>
         <div className="flex justify-end">
           <IconButton socialMedia={SOCIALS.GH}></IconButton>

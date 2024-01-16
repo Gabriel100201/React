@@ -8,7 +8,7 @@ export const Footer = () => {
             <img src={Avatar} className="h-12" alt="Avatar Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary-200">Gabriel Funes</span>
           </div>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-primary-200 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wra justify-center items-center mb-6 text-sm font-medium text-primary-200 sm:mb-0 dark:text-gray-400">
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">Acerca de mí</a>
             </li>
