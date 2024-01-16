@@ -12,6 +12,8 @@ import { ArrowDown } from './components/ArrowDown';
 import { Projects } from "./templates/Projects";
 import { Experience } from "./templates/Experience";
 import { ScrollProvider } from "./context/refs";
+import { ContactSection } from "./templates/ContactSection";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   /* useEffect(() => {
@@ -34,6 +36,8 @@ export const App = () => {
             </div>
             <Experience></Experience>
             <Projects></Projects>
+            <ContactSection></ContactSection>
+            <Footer></Footer>
           </div>
           <BackGround></BackGround>
         </ScrollProvider>

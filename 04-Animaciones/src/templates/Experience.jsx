@@ -1,9 +1,13 @@
+import { useContext } from 'react'
 import { Button } from '../components/Button'
 import info from '../constants/experienceInfo.json'
+import { ScrollContext } from '../context/refs'
 
 export const Experience = () => {
+  const { experienciaRef } = useContext(ScrollContext)
+
   return (
-    <section className="w-full mt-36">
+    <section ref={experienciaRef} className="w-full mt-36">
       <h2 className="text-5xl text-primary-50 font-semibold mb-16">Experiencia</h2>
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {

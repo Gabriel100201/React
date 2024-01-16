@@ -12,7 +12,7 @@ export const Home = () => {
   const { sobreMiRef } = useContext(ScrollContext)
 
   return (
-    <section ref={sobreMiRef} className="w-full h-auto  flex flex-col md:flex-row justify-between items-center gap-20 relative mt-32 sm:mt-32 md:mt-48 lg:mt-28 xl:mt-28 2xl:mt-60">
+    <section ref={sobreMiRef} className="w-full h-auto  flex flex-col md:flex-row justify-between items-center gap-20 relative pt-32 sm:pt-32 md:pt-48 lg:pt-28 xl:pt-28 2xl:pt-60">
       <div ref={firstparallax.ref} className="md:w-1/2 flex flex-col items-start md:items-start">
         <h2 className="text-alternatyve-500 text-start font-semibold text-md md:text-3xl mb-1">Desarrollador Front-End</h2>
         <h1 className="text-white font-semibold text-7xl md:text-7xl mb-5 text-start md:text-start block sm:hidden md:block">Gabriel Funes</h1>
