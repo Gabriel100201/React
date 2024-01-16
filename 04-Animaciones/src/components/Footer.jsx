@@ -10,16 +10,10 @@ export const Footer = () => {
           </div>
           <ul className="flex flex-wra justify-center items-center mb-6 text-sm font-medium text-primary-200 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">Acerca de mí</a>
+              <a href="https://www.linkedin.com/in/gabriel-funes-developer/" className="hover:underline me-4 md:me-6">Acerca de mí</a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Contacto</a>
+              <a href="mailto:gabrielfunes100202@gmail.com" className="hover:underline">Contacto</a>
             </li>
           </ul>
         </div>

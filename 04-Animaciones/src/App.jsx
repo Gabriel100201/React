@@ -14,14 +14,15 @@ import { Experience } from "./templates/Experience";
 import { ScrollProvider } from "./context/refs";
 import { ContactSection } from "./templates/ContactSection";
 import { Footer } from "./components/Footer";
+import { useEffect } from "react";
 
 export const App = () => {
-  /* useEffect(() => {
+  useEffect(() => {
     animateFull();
-    setTimeout(() => {
+    /* setTimeout(() => {
       animatePolygon()
-    }, [500])
-  }, [BackGround]) */
+    }, [500]) */
+  }, [BackGround])
 
   return (
     <>
