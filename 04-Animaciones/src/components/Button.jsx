@@ -15,9 +15,9 @@ export const Button = ({ primary = true, secondary, children, size }) => {
   const sizeStyles = sizes[size] || sizes.md
 
   return (
-    <div className={`flex justify-center font-medium  items-center rounded-full focus:outline-none text-white hover:cursor-pointer hover:scale-105 transition-all ${componentStyles} ${sizeStyles}`}>
+    <button className={`flex justify-center font-medium  items-center rounded-full focus:outline-none text-white hover:cursor-pointer hover:scale-105 transition-all ${componentStyles} ${sizeStyles}`}>
       {children}
-    </div>
+    </button>
   );
 };
 
