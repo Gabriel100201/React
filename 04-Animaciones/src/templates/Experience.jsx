@@ -2,14 +2,15 @@ import { useContext } from 'react'
 import { Button } from '../components/Button'
 import info from '../constants/experienceInfo.json'
 import { ScrollContext } from '../context/refs'
+import { useParallax } from 'react-scroll-parallax';
 
 export const Experience = () => {
   const { experienciaRef } = useContext(ScrollContext)
-
+  const parallax = useParallax({ speed: 10 })
   return (
     <section ref={experienciaRef} className="w-full mt-36">
       <h2 className="text-5xl text-primary-50 font-semibold mb-16">Experiencia</h2>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+      <ol ref={parallax.ref} className="relative border-s border-gray-200 dark:border-gray-700">
         {
           info &&
           info.map((item, index) => {

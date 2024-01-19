@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Contact } from "../components/Contact"
 import { ScrollContext } from "../context/refs"
+import { useParallax } from "react-scroll-parallax"
 
 export const ContactSection = () => {
   const { contactoRef } = useContext(ScrollContext)

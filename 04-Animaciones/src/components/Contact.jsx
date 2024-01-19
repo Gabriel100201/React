@@ -1,8 +1,10 @@
+import { useParallax } from "react-scroll-parallax";
 import { useSendMail } from "../hooks/useSendMail";
 import { Button } from "./Button"
 import { Toaster } from 'sonner'
 
 export const Contact = () => {
+  const parallax = useParallax({ speed: 20 })
 
   const { data, error, loading, fetchToEndpoint } = useSendMail()
 
@@ -15,7 +17,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="w-full">
+    <section ref={parallax.ref} className="w-full">
       <Toaster richColors></Toaster>
       <div className="py-8 lg:py-20 px-7 md:px-12 2xl:px-48 w-full  bg-primary-500/20 backdrop-blur-sm rounded-2xl ">
         <p className="mb-8 lg:mb-16 text-center text-primary-50 font-medium sm:text-lg">¡Hola! Estoy emocionado de conectarme contigo. Si tienes alguna pregunta, propuesta o simplemente quieres charlar, no dudes en escribirme a mi correo electrónico.📧</p>
