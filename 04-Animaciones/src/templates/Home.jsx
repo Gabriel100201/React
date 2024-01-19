@@ -24,9 +24,15 @@ export const Home = () => {
         </div>
         <h4 className="text-white font-semibold text-md first-letter:text-alternatyve-500 first-letter:text-2xl">Hola, soy un apasionado del desarrollo de software Front-End con experiencia en tecnologías líderes como React y Vue. Mi pasión por mantenerme actualizado en las últimas tendencias del desarrollo Front-End me permite brindar soluciones innovadoras que impulsan la experiencia del usuario.</h4>
         <div className='flex gap-7 mt-7 items-center'>
-          <Button>Descargar CV</Button>
-          <IconButton socialMedia={SOCIALS.LI}></IconButton>
-          <IconButton socialMedia={SOCIALS.GH}></IconButton>
+          <a href="/GabrielFunesCV.pdf" target='_blank'>
+            <Button>Descargar CV</Button>
+          </a>
+          <a href="https://www.linkedin.com/in/gabriel-funes-developer/" target='_blank'>
+            <IconButton socialMedia={SOCIALS.LI}></IconButton>
+          </a>
+          <a href="https://github.com/Gabriel100201" target='_blank'>
+            <IconButton socialMedia={SOCIALS.GH}></IconButton>
+          </a>
         </div>
       </div>
       <div ref={secondParallax.ref} className="hidden md:flex md:w-1/2 justify-end">

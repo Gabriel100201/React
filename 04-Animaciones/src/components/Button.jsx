@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({ primary = true, secondary, children, size }) => {
+export const Button = ({ primary = true, secondary, children, size, isDisabled = false }) => {
 
   const primaryStyles = 'bg-alternatyve-600 hover:bg-alternatyve-700 text-sm text-center';
   const secondaryStyles = ' focus:ring-4 text-sm text-center border-alternatyve-500 hover:border-alternatyve-300 border-2 bg-white/0 hover:bg-white/10';
@@ -15,7 +15,7 @@ export const Button = ({ primary = true, secondary, children, size }) => {
   const sizeStyles = sizes[size] || sizes.md
 
   return (
-    <button className={`flex justify-center font-medium  items-center rounded-full focus:outline-none text-white hover:cursor-pointer hover:scale-105 transition-all ${componentStyles} ${sizeStyles}`}>
+    <button disabled={isDisabled} className={`flex justify-center font-medium  items-center rounded-full focus:outline-none text-white hover:cursor-pointer hover:scale-105 transition-all ${componentStyles} ${sizeStyles}`}>
       {children}
     </button>
   );
