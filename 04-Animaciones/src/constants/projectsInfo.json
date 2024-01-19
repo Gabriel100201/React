@@ -1,0 +1,23 @@
+[
+  {
+    "title": "E-Ball",
+    "text": "E-Ball es un E-Commerce meticulosamente desarrollado utilizando React. Para brindar una interfaz visualmente atractiva y moderna, se empleó Tailwind CSS, asegurando un diseño elegante y responsivo. El proyecto incorpora prácticas avanzadas de gestión de estado mediante el uso de la funcionalidad useContext de React, permitiendo una administración eficiente de los estados globales. Además, se implementó react-router para la creación de rutas privadas, asegurando una experiencia de usuario fluida y segura durante la navegación.",
+    "img": "Project_01.png",
+    "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
+    "urlProject": "https://react-six-teal.vercel.app/"
+  },
+  {
+    "title": "E-Ball1",
+    "text": "E-Ball es un dinámico E-Commerce especializado en la venta de balones de fútbol, meticulosamente desarrollado utilizando la tecnología React. Para brindar una interfaz visualmente atractiva y moderna, se empleó Tailwind CSS, asegurando un diseño elegante y responsivo. El proyecto incorpora prácticas avanzadas de gestión de estado mediante el uso de la funcionalidad useContext de React, permitiendo una administración eficiente de los estados globales. Además, se implementó react-router para la creación de rutas privadas, asegurando una experiencia de usuario fluida y segura durante la navegación.",
+    "img": "Project_01.png",
+    "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
+    "urlProject": "https://react-six-teal.vercel.app/"
+  },
+  {
+    "title": "E-Ball2",
+    "text": "E-Ball es un dinámico E-Commerce especializado en la venta de balones de fútbol, meticulosamente desarrollado utilizando la tecnología React. Para brindar una interfaz visualmente atractiva y moderna, se empleó Tailwind CSS, asegurando un diseño elegante y responsivo. El proyecto incorpora prácticas avanzadas de gestión de estado mediante el uso de la funcionalidad useContext de React, permitiendo una administración eficiente de los estados globales. Además, se implementó react-router para la creación de rutas privadas, asegurando una experiencia de usuario fluida y segura durante la navegación.",
+    "img": "Project_01.png",
+    "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
+    "urlProject": "https://react-six-teal.vercel.app/"
+  }
+]
