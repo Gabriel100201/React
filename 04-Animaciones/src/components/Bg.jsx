@@ -17,7 +17,7 @@ export const BackGround = () => {
       >
         {/* url(&quot;#SvgjsLinearGradient1681&quot;) */}
         <g mask="url(&quot;#SvgjsMask1680&quot;)" fill="none">
-          <rect width="1920" height="1080" x="0" y="0" fill={themeColors.primary['900']}></rect>
+          <rect width="1920" height="1080" x="0" y="0" fill={"url(#CustomLinearGradient)"}></rect>
           <path className="lineBg" d="M -616.8463065969189,639 C -520.85,603 -328.85,466.6 -136.84630659691894,459 C 55.15,451.4 151.15,585.4 343.1536934030811,601 C 535.15,616.6 631.15,542.2 823.1536934030811,537 C 1015.15,531.8 1111.15,610 1303.153693403081,575 C 1495.15,540 1659.78,357.8 1783.153693403081,362 C 1906.52,366.2 1892.63,549.2 1920,596" stroke={linesColor} opacity={.3} strokeWidth="2"></path>
           <path className="lineBg" d="M -543.3588559198489,645 C -447.36,586.4 -255.36,356.6 -63.35885591984891,352 C 128.64,347.4 224.64,619.2 416.6411440801511,622 C 608.64,624.8 704.64,350 896.6411440801511,366 C 1088.64,382 1184.64,696.8 1376.6411440801512,702 C 1568.64,707.2 1747.97,406 1856.6411440801512,392 C 1965.31,378 1907.33,584 1920,632" stroke={linesColor} opacity={.3} strokeWidth="2"></path>
           <path className="lineBg" d="M -235.7386316164815,495 C -139.74,530.8 52.26,698 244.2613683835185,674 C 436.26,650 532.26,384.6 724.2613683835185,375 C 916.26,365.4 1012.26,609 1204.2613683835184,626 C 1396.26,643 1492.26,470.6 1684.2613683835184,460 C 1876.26,449.4 2117.11,580.2 2164.2613683835184,573 C 2211.41,565.8 1968.85,453.8 1920,424" stroke={linesColor} opacity={.3} strokeWidth="2"></path>
@@ -33,6 +33,11 @@ export const BackGround = () => {
           <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1681">
             <stop stopColor="rgba(27, 0, 62, 1)" offset="0"></stop>
             <stop stopColor="rgba(0, 0, 0, 1)" offset="1"></stop>
+          </linearGradient>
+          <linearGradient id="CustomLinearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{ stopColor: themeColors.primary['600'], stopOpacity: 1 }} />
+            <stop offset="40%" style={{ stopColor: themeColors.primary['950'], stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: themeColors.primary['950'], stopOpacity: 1 }} />
           </linearGradient>
         </defs>
       </svg>
