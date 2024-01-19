@@ -9,7 +9,7 @@ export const GridItems = () => {
           projectsInfo &&
           projectsInfo.map((project) => {
             return (
-              <ProjectCard urlProject={project.urlProject} urlGh={project.urlGH} key={project.title} title={project.title} text={project.text} img={`./src/assets/${project.img}`}></ProjectCard>
+              <ProjectCard urlProject={project.urlProject} urlGh={project.urlGH} key={project.title} title={project.title} text={project.text} img={`./${project.img}`}></ProjectCard>
             )
           })
         }
