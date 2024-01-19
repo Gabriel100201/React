@@ -17,6 +17,7 @@ export const useSendMail = () => {
         },
         body: JSON.stringify({
           to: MAIL_TO_SEND,
+          from: emailForm,
           subjet: subjectForm,
           text: textForm,
         }),
