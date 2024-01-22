@@ -18,7 +18,7 @@ export const useSendMail = () => {
         body: JSON.stringify({
           to: MAIL_TO_SEND,
           from: emailForm,
-          subjet: subjectForm,
+          subject: subjectForm,
           text: textForm,
         }),
       });
@@ -37,8 +37,21 @@ export const useSendMail = () => {
       toast.success("¡Correo enviado con éxito!");
     }
     catch (err) {
-      setError(err)
-      toast.error(err.message || "Ocurrió un error inesperado");
+      if (err instanceof TypeError) {
+        setError("Hubo un problema de tipo. Verifica la estructura de los datos enviados");
+      } else if (err instanceof SyntaxError) {
+        setError("Error de sintaxis en la respuesta del servidor");
+      } else if (err instanceof NetworkError) {
+        setError("Error de red. Verifica tu conexión a Internet");
+      } else if (err instanceof SecurityError) {
+        setError("Error de seguridad al realizar la solicitud");
+      } else if (err instanceof RateLimitError) {
+        setError("Debes esperar 5 minutos para enviar otro mensaje");
+      } else if (err instanceof OtherSpecificError) {
+        setError("Ocurrió un error específico manejado de manera especial");
+      } else {
+        setError("Ocurrió un error inesperado, intenta nuevamente más tarde");
+      }
     }
     finally {
       setLoading(false)
