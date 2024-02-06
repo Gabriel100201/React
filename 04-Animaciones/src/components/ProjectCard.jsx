@@ -17,12 +17,16 @@ export const ProjectCard = ({ title, text, img, urlProject, urlGh }) => {
       <div className="absolute inset-0 flex flex-col justify-between p-7 text-white opacity-100">
         <div className="flex flex-col justify-start">
           <h3 className="text-4xl font-semibold text-start mb-2">{title}</h3>
-          <p className="text-md text-start opacity-100 xl:opacity-0 group-hover:opacity-100 overflow-hidden max-h-[12em] transition-all">{text}</p>
+          <p className="text-md text-start opacity-100 xl:opacity-0 group-hover:opacity-100  overflow-hidden max-h-[12em] transition-all line-clamp-[7]" >{text}</p>
         </div>
-        <div className="flex justify-end hover:cursor-pointer">
-          <a href={urlGh} target="_blank">
-            <IconButton socialMedia={SOCIALS.GH}></IconButton>
-          </a>
+        <div className="flex justify-end">
+          {
+            urlGh && (urlGh != "private") && (
+              <a href={urlGh} target="_blank" className="hover:cursor-pointer">
+                <IconButton socialMedia={SOCIALS.GH}></IconButton>
+              </a>
+            )
+          }
         </div>
       </div>
       <a href={urlProject} target="_blank">
@@ -30,6 +34,6 @@ export const ProjectCard = ({ title, text, img, urlProject, urlGh }) => {
           <FaExternalLinkAlt className="text-primary-50 text-xl opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
       </a>
-    </div>
+    </div >
   );
 };
