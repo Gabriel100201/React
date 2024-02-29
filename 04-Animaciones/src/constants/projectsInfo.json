@@ -1,10 +1,10 @@
 [
   {
-    "title": "Buscador de Resoluciones",
-    "text": "El 'Buscador de Resoluciones' es una aplicación web diseñada con el propósito de simplificar la búsqueda de digestos y resoluciones ministeriales en la provincia de San Juan. Este proyecto fue desarrollado específicamente para la Dirección de Gobierno Digital y actualmente se utiliza con éxito en diversos ministerios. La aplicación proporciona una solución eficiente, permitiendo a los usuarios buscar y acceder a resoluciones de manera rápida y sin la necesidad de recurrir a archivos físicos. Su implementación ha optimizado significativamente el proceso de gestión documental, mejorando la eficiencia y facilitando el acceso a información crucial para el funcionamiento gubernamental.",
-    "img": "Project_03.png",
-    "urlGH": "private",
-    "urlProject": "https://digestos.sanjuan.gob.ar/"
+    "title": "FastShare",
+    "text": "FastShare es una extension de visualstudio code desarrollada con el objetivo de simplificar la conexión en Visual Studio Code Live Share dentro de tu red local. Para ello se hace uso de WebHooks, y bonjour, lo cual permite usar señales broadcast para transmitir información por toda la red local.",
+    "img": "Project_04.png",
+    "urlGH": "https://github.com/Gabriel100201/vscode-extension",
+    "urlProject": "https://marketplace.visualstudio.com/items?itemName=GabrielFunes100201.fastshare"
   },
   {
     "title": "E-Ball",
@@ -12,6 +12,13 @@
     "img": "Project_01.png",
     "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
     "urlProject": "https://react-six-teal.vercel.app/"
+  },
+  {
+    "title": "Buscador de Resoluciones",
+    "text": "El 'Buscador de Resoluciones' es una aplicación web diseñada con el propósito de simplificar la búsqueda de digestos y resoluciones ministeriales en la provincia de San Juan. Este proyecto fue desarrollado específicamente para la Dirección de Gobierno Digital y actualmente se utiliza con éxito en diversos ministerios. La aplicación proporciona una solución eficiente, permitiendo a los usuarios buscar y acceder a resoluciones de manera rápida y sin la necesidad de recurrir a archivos físicos. Su implementación ha optimizado significativamente el proceso de gestión documental, mejorando la eficiencia y facilitando el acceso a información crucial para el funcionamiento gubernamental.",
+    "img": "Project_03.png",
+    "urlGH": "private",
+    "urlProject": "https://digestos.sanjuan.gob.ar/"
   },
   {
     "title": "Ahorcado",
