@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: backgroun-color 0.2s;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(3.8rem);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(5.2rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8rem) scale(0.5);
+  }
+}

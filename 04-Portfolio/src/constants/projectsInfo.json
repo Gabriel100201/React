@@ -1,0 +1,30 @@
+[
+  {
+    "title": "FastShare",
+    "text": "FastShare es una extension de visualstudio code desarrollada con el objetivo de simplificar la conexión en Visual Studio Code Live Share dentro de tu red local. Para ello se hace uso de WebHooks, y bonjour, lo cual permite usar señales broadcast para transmitir información por toda la red local.",
+    "img": "Project_04.png",
+    "urlGH": "https://github.com/Gabriel100201/vscode-extension",
+    "urlProject": "https://marketplace.visualstudio.com/items?itemName=GabrielFunes100201.fastshare"
+  },
+  {
+    "title": "E-Ball",
+    "text": "E-Ball es un E-Commerce meticulosamente desarrollado utilizando React. Para brindar una interfaz visualmente atractiva y moderna, se empleó Tailwind CSS, asegurando un diseño elegante y responsivo. El proyecto incorpora prácticas avanzadas de gestión de estado mediante el uso de la funcionalidad useContext de React, permitiendo una administración eficiente de los estados globales. Además, se implementó react-router para la creación de rutas privadas, asegurando una experiencia de usuario fluida y segura durante la navegación.",
+    "img": "Project_01.png",
+    "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
+    "urlProject": "https://react-six-teal.vercel.app/"
+  },
+  {
+    "title": "Buscador de Resoluciones",
+    "text": "El 'Buscador de Resoluciones' es una aplicación web diseñada con el propósito de simplificar la búsqueda de digestos y resoluciones ministeriales en la provincia de San Juan. Este proyecto fue desarrollado específicamente para la Dirección de Gobierno Digital y actualmente se utiliza con éxito en diversos ministerios. La aplicación proporciona una solución eficiente, permitiendo a los usuarios buscar y acceder a resoluciones de manera rápida y sin la necesidad de recurrir a archivos físicos. Su implementación ha optimizado significativamente el proceso de gestión documental, mejorando la eficiencia y facilitando el acceso a información crucial para el funcionamiento gubernamental.",
+    "img": "Project_03.png",
+    "urlGH": "private",
+    "urlProject": "https://digestos.sanjuan.gob.ar/"
+  },
+  {
+    "title": "Ahorcado",
+    "text": "Ahorcado es un juego interactivo desarrollado mediante el uso de JavaScript y CSS nativos, diseñado con el objetivo de fortalecer y ampliar las habilidades fundamentales esenciales para el crecimiento escalonado como desarrollador de software front-end. Este proyecto se centra en la creación de una versión del juego del ahorcado, clásico y entretenido, con un enfoque temático en animales. Además, se ha incorporado la funcionalidad de permitir a los usuarios agregar nuevas palabras, lo que añade un nivel de personalización y emoción, ya que las palabras sugeridas pueden participar en la próxima ronda del juego.",
+    "img": "Project_02.png",
+    "urlGH": "https://github.com/Gabriel100201/E-commerce",
+    "urlProject": "https://gabriel100201.github.io/ONE-Ahorcado/"
+  }
+]
