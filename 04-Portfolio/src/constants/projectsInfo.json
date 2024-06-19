@@ -1,5 +1,12 @@
 [
   {
+    "title": "Boleto Escolar",
+    "text": "Landing Page usada por el gobierno de la provincia de San Juan para proveer el beneficio o beca de transporte a alumnos y docentes, visitado por más de 30000 personas en sus primeros dias en producción",
+    "img": "BoletoEscolar.PNG",
+    "urlGH": "private",
+    "urlProject": "https://boletoescolar.sanjuan.gob.ar"
+  },
+  {
     "title": "FastShare",
     "text": "FastShare es una extension de visualstudio code desarrollada con el objetivo de simplificar la conexión en Visual Studio Code Live Share dentro de tu red local. Para ello se hace uso de WebHooks, y bonjour, lo cual permite usar señales broadcast para transmitir información por toda la red local.",
     "img": "Project_04.png",

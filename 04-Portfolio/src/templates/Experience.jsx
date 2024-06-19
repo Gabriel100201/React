@@ -9,7 +9,7 @@ export const Experience = () => {
   const parallax = useParallax({ speed: 10 })
   return (
     <section ref={experienciaRef} className="w-full mt-36">
-      <h2 className="text-5xl text-primary-50 font-semibold mb-16">Experiencia</h2>
+      <h2 className="text-4xl md:text-5xl text-primary-50 font-semibold mb-3 md:mb-16">Experiencia</h2>
       <ol ref={parallax.ref} className="relative border-s border-gray-200 dark:border-gray-700">
         {
           info &&

@@ -4,7 +4,7 @@ export const Footer = () => {
     <footer className="w-full mt-32 bg-transparent absolute left-0 px-12 sm:px-32 md:px-36 lg:px-32 xl:px-48 2xl:px-96">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between sm:flex-col lg:flex-row gap-3">
-          <div className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <div className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse justify-center md:justify-start">
             <img src={Avatar} className="h-12 grayscale" alt="Avatar Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary-200">Gabriel Funes</span>
           </div>
@@ -18,7 +18,7 @@ export const Footer = () => {
           </ul>
         </div>
         <hr className="my-6 border-primary-50 sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-primary-400 sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline"></a>Todos los derechos reservados.</span>
+        <span className="block text-sm text-primary-200 sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline"></a>Todos los derechos reservados.</span>
       </div>
     </footer>
   )
