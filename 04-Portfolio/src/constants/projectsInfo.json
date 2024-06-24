@@ -1,42 +1,42 @@
 [
   {
     "title": "Boleto Escolar",
-    "text": "Landing Page usada por el gobierno de la provincia de San Juan para proveer el beneficio o beca de transporte a alumnos y docentes, visitado por más de 30000 personas en sus primeros dias en producción.",
+    "text": "Landing Page utilizada por el gobierno de la provincia de San Juan para gestionar el beneficio de transporte a alumnos y docentes. En sus primeros días en producción, fue visitada por más de 30,000 personas.",
     "img": "BoletoEscolar.PNG",
     "urlGH": "private",
     "urlProject": "https://boletoescolar.sanjuan.gob.ar"
   },
   {
     "title": "Neuquen Pymes",
-    "text": "La página web de Neuquén Pymes es una landing page informativa que cuenta con varias secciones dedicadas a proporcionar información valiosa a las pequeñas y medianas empresas. Además, incluye una sección interactiva con una calculadora financiera que permite realizar operaciones de descuento de cheques y gestionar el saldo en el mercado de capitales. Esta plataforma está desarrollada con Vue.js, garantizando una experiencia de usuario fluida y eficiente.",
+    "text": "Página web informativa para Neuquén Pymes, con secciones dedicadas a proporcionar información valiosa a pequeñas y medianas empresas. Incluye una calculadora financiera desarrollada con Vue.js para operaciones de descuento de cheques y gestión de saldo en el mercado de capitales.",
     "img": "Neuquen-Pymes.png",
     "urlGH": "private",
     "urlProject": "https://titanesclub.com/"
   },
   {
     "title": "Club de Titanes",
-    "text": "La página web del Club de Titanes es una landing page desarrollada con React y Tailwind CSS. Cuenta con animaciones, efectos parallax y diversas herramientas visuales que, en conjunto, crean una experiencia de usuario de alta calidad tanto en términos visuales como de rendimiento.",
+    "text": "Landing page del Club de Titanes desarrollada con React y Tailwind CSS, destacando por sus animaciones, efectos parallax y diseño visual atractivo que optimizan la experiencia del usuario.",
     "img": "Titanes-Club.png",
     "urlGH": "private",
     "urlProject": "https://www.neuquenpymes.com.ar/"
   },
   {
     "title": "FastShare",
-    "text": "FastShare es una extension de visualstudio code desarrollada con el objetivo de simplificar la conexión en Visual Studio Code Live Share dentro de tu red local. Para ello se hace uso de WebHooks, y bonjour, lo cual permite usar señales broadcast para transmitir información por toda la red local.",
+    "text": "Extensión para Visual Studio Code que simplifica la conexión en Visual Studio Code Live Share dentro de redes locales usando WebHooks y Bonjour para señales broadcast.",
     "img": "Project_04.png",
     "urlGH": "https://github.com/Gabriel100201/vscode-extension",
     "urlProject": "https://marketplace.visualstudio.com/items?itemName=GabrielFunes100201.fastshare"
   },
   {
     "title": "E-Ball",
-    "text": "E-Ball es un E-Commerce meticulosamente desarrollado utilizando React. Para brindar una interfaz visualmente atractiva y moderna, se empleó Tailwind CSS, asegurando un diseño elegante y responsivo. El proyecto incorpora prácticas avanzadas de gestión de estado mediante el uso de la funcionalidad useContext de React, permitiendo una administración eficiente de los estados globales. Además, se implementó react-router para la creación de rutas privadas, asegurando una experiencia de usuario fluida y segura durante la navegación.",
+    "text": "E-Commerce desarrollado meticulosamente con React y Tailwind CSS, ofreciendo una interfaz moderna y responsiva. Utiliza useContext de React para una gestión avanzada de estado y react-router para rutas privadas, asegurando una experiencia de usuario fluida y segura.",
     "img": "Project_01.png",
     "urlGH": "https://github.com/Gabriel100201/React/tree/master/05-Ecommerce",
     "urlProject": "https://react-six-teal.vercel.app/"
   },
   {
     "title": "Digestos Miniseriales",
-    "text": "La página de Digestos Ministeriales es una aplicación web diseñada con el propósito de simplificar la búsqueda de digestos y resoluciones ministeriales en la provincia de San Juan. Este proyecto fue desarrollado específicamente para la Dirección de Gobierno Digital",
+    "text": "Aplicación web diseñada para simplificar la búsqueda de digestos y resoluciones ministeriales en la provincia de San Juan, desarrollada para la Dirección de Gobierno Digital.",
     "img": "Project_03.png",
     "urlGH": "private",
     "urlProject": "https://digestos.sanjuan.gob.ar/"

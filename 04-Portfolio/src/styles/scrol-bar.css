@@ -1,0 +1,11 @@
+.card-project::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+.card-project::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.card-project:hover::-webkit-scrollbar-thumb {
+  background-color: #0BA848;
+}
