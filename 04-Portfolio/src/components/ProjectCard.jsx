@@ -1,6 +1,6 @@
 import { SOCIALS } from "../constants/socials";
 import { IconButton } from "./IconButton";
-import { FaExternalLinkAlt } from "react-icons/fa";
+
 
 // eslint-disable-next-line react/prop-types
 export const ProjectCard = ({ title, text, img, urlProject, urlGh }) => {
@@ -19,7 +19,7 @@ export const ProjectCard = ({ title, text, img, urlProject, urlGh }) => {
         <div className="absolute inset-0 flex flex-col justify-between p-7 text-white opacity-100">
           <div className="flex flex-col justify-start">
             <h3 className="text-3xl xl:text-4xl font-semibold text-center xl:text-start mb-2">{title}</h3>
-            <p className="text-md text-start font-semibold opacity-100 xl:opacity-0 group-hover:opacity-100 mt-5 overflow-hidden max-h-[12em] transition-all line-clamp-[10]" >{text}</p>
+            <p className="text-md text-start h-full font-semibold opacity-100 xl:opacity-0 group-hover:opacity-100 mt-5 overflow-hidden max-h-[12em] transition-all" >{text}</p>
           </div>
         </div>
       </a>
