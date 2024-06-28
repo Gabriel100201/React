@@ -8,7 +8,7 @@ export const ProjectCard = ({ title, text, img, urlProject, urlGh }) => {
 
   return (
     <div className="h-96 rounded-lg relative overflow-hidden group select-none">
-      <a href={urlProject} className="cursor-pointer">
+      <a href={urlProject} target="_blank" className="cursor-pointer" rel="noreferrer">
         <div
           className="h-full w-full bg-cover brightness-[.4] scale-110 xl:scale-100 xl:brightness-75 group-hover:brightness-[.4] bg-center bg-no-repeat transition-all duration-300 transform group-hover:scale-110 group-hover:blur-[1px]"
           style={{

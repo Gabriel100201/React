@@ -11,14 +11,14 @@
     "text": "Página web informativa para Neuquén Pymes, con secciones dedicadas a proporcionar información valiosa a pequeñas y medianas empresas. Incluye una calculadora financiera desarrollada con Vue.js para operaciones de descuento de cheques y gestión de saldo en el mercado de capitales.",
     "img": "Neuquen-Pymes.png",
     "urlGH": "private",
-    "urlProject": "https://titanesclub.com/"
+    "urlProject": "https://www.neuquenpymes.com.ar/"
   },
   {
     "title": "Club de Titanes",
     "text": "Landing page del Club de Titanes desarrollada con React y Tailwind CSS, destacando por sus animaciones, efectos parallax y diseño visual atractivo que optimizan la experiencia del usuario.",
     "img": "Titanes-Club.png",
     "urlGH": "private",
-    "urlProject": "https://www.neuquenpymes.com.ar/"
+    "urlProject": "https://titanesclub.com/"
   },
   {
     "title": "FastShare",
